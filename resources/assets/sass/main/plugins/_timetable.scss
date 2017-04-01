@@ -1,0 +1,49 @@
+/*
+timetable
+*/
+#timetable {
+  text-align: center;
+  border-top: none;
+  width: 99%;
+}
+
+#timetable span {
+  display: block;
+}
+
+#timetable th, #timetable td {
+  vertical-align: middle;
+  font-weight: normal;
+  text-align: center;
+  padding: 20px 2px;
+}
+
+#timetable thead {
+  background-color: $default-reverse-color;
+  border: 1px solid $default-reverse-color;
+  color: #ffffff;
+}
+
+#timetable thead th {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-width: 0 1px;
+}
+
+#timetable tbody {
+  font-size: 14px;
+}
+
+#timetable tbody th, #timetable tbody td {
+  border: 1px solid #e5e5e5;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+#timetable tbody .current {
+  background-color: $default-theme-color;
+  border-color: $default-theme-color;
+}
+
+#timetable tbody .current a {
+  color: #ffffff;
+}

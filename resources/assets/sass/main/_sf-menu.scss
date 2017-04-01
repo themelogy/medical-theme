@@ -1,0 +1,426 @@
+.sf-menu a {
+  font-family: $default-font-3;
+}
+.sf-menu li {
+  text-transform: uppercase;
+}
+
+.sf-menu ul li {
+  text-transform: none;
+}
+
+/*
+**main menu (min 992px) styles
+*/
+@media (min-width: 992px) {
+  /* menu layout */
+  .sf-menu, .sf-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .sf-menu li {
+    position: relative;
+  }
+
+  .sf-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    z-index: 99;
+  }
+
+  .sf-menu li:hover > ul,
+  .sf-menu li.sfHover > ul {
+    display: block;
+  }
+
+  .sf-menu a {
+    display: block;
+    position: relative;
+  }
+
+  .sf-menu ul ul {
+    top: -20px;
+    left: 100%;
+  }
+  /* menu skin */
+  .sf-menu a {
+    font-weight: 500;
+    padding: .75em 1.0em;
+    text-decoration: none;
+    zoom: 1;
+    /* IE7 */
+    -webkit-transition-property: color, background-color, border-color;
+    transition-property: color, background-color, border-color;
+  }
+
+  .sf-menu li {
+    white-space: nowrap;
+    /* no need for Supersubs plugin */
+    *white-space: normal;
+    /* ...unless you support IE7 (let it wrap) */
+    -webkit-transition: background .2s;
+    transition: background .2s;
+  }
+
+  .sf-menu > li {
+    display: inline-block;
+    padding: 20px 0 20px;
+    position: relative;
+  }
+
+  .sf-menu > li > a {
+    padding: 15px 7px;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    min-height: 51px;
+    max-height: 51px;
+  }
+
+  .boxed .sf-menu > li > a {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .sf-menu > li > a:hover,
+  .sf-menu > li.active > a {
+    color: $default-theme-color;
+  }
+
+  .bordered_items .sf-menu {
+    text-align: center;
+  }
+
+  .bordered_items .sf-menu > li {
+    padding: 0;
+  }
+
+  .bordered_items .sf-menu > li > a {
+    padding: 20px 40px 20px 44px;
+  }
+
+  .bordered_items .sf-menu > li + li:before {
+    content: '';
+    width: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .header_white .sf-menu > li > a {
+    color: mix($default-theme-color, $default-reverse-color, 50%);
+  }
+
+  .header_white .sf-menu > li > a:hover,
+  .header_white .sf-menu > li.active > a {
+    color: $default-reverse-color;
+  }
+
+  .header_white .sf-menu > li + li:before {
+    background-color: #e5e5e5;
+  }
+
+  .header_darkgrey .sf-menu > li > a {
+    color: #ffffff;
+  }
+
+  .header_darkgrey .sf-menu > li > a:hover,
+  .header_darkgrey .sf-menu > li.active > a {
+    color: $default-theme-color;
+  }
+
+  .header_gradient .sf-menu > li > a {
+    color: #ffffff;
+  }
+
+  .header_gradient .sf-menu > li > a:hover,
+  .header_gradient .sf-menu > li.active > a {
+    color: #323232;
+  }
+
+  .sf-menu li:hover,
+  .sf-menu li.sfHover {
+    /* only transition out, not in */
+    -webkit-transition: none;
+    transition: none;
+  }
+  /* second level */
+  .sf-menu ul {
+    text-align: left;
+    list-style: none;
+    padding: 20px 0;
+    background-color: $default-theme-color;
+    min-width: 12em;
+    *width: 12em;
+    @include box-shadow(0px, 2px, 5px, rgba(darken($default-theme-color, 75%),0.1));
+  }
+
+  .sf-menu ul a {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .sf-menu ul > li + li:before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    left: 40px;
+    right: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .sf-menu ul a:hover,
+  .sf-menu ul li.active a {
+    color: $default-theme-second-color;
+  }
+  .sf-menu ul li ul a:hover,
+  .sf-menu ul li ul li.active a {
+    color: $default-theme-second-color;
+  }
+  /* third level */
+  .sf-menu ul ul {
+    background-color: $default-reverse-color;
+    border-top: 0;
+  }
+
+  .affix-top .sf-menu > li > a [class*='icon'] {
+    display: block;
+    font-size: 1.9em;
+    line-height: 1em;
+    padding: 0;
+    top: 0;
+    text-align: center;
+  }
+  /*** arrows (for all except IE7) **/
+  /* styling for both css and generated arrows */
+  .sf-arrows .sf-with-ul:after {
+    font-family: 'FontAwesome';
+    content: "\f107";
+    padding-left: 7px;
+  }
+  /*top menu level*/
+  /* styling for right-facing arrows */
+  .sf-arrows ul .sf-with-ul:after {
+    content: "\f105";
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+  .sf-menu > li > a {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+
+  .boxed .sf-menu > li > a {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .bordered_items .sf-menu > li > a {
+    padding-right: 20px;
+    padding-left: 24px;
+  }
+}
+
+.toggle_menu {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  display: none;
+  background-color: #ffffff;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 1001;
+  visibility: visible;
+}
+
+.page_toplogo .toggle_menu {
+  position: fixed;
+  top: 35px;
+  margin: 0;
+}
+
+.page_toplogo .toggle_menu.mobile-active {
+  top: 0;
+}
+
+.toggle_menu:hover span:before {
+  top: -7px;
+}
+
+.toggle_menu:hover span:after {
+  top: 7px;
+}
+
+.toggle_menu span,
+.toggle_menu span:before,
+.toggle_menu span:after {
+  display: block;
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  background-color: #323232;
+  content: '';
+  left: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.toggle_menu span {
+  left: 20px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.toggle_menu span:before {
+  top: -5px;
+}
+
+.toggle_menu span:after {
+  top: 5px;
+}
+
+/*
+**main menu mobile styles
+*/
+@media (max-width: 991px) {
+  .mainmenu_wrapper {
+    /*position: relative;*/
+    position: fixed;
+    visibility: hidden;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: transparent;
+    opacity: 0;
+    -webkit-transition: all 0.2s linear 0s;
+    transition: all 0.2s linear 0s;
+  }
+
+  .mobile-active .mainmenu_wrapper {
+    visibility: visible;
+    opacity: 1;
+    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  .toggle_menu {
+    display: block;
+  }
+
+  .toggle_menu.mobile-active {
+    background-color: #ffffff !important;
+    border: none;
+    top: 0;
+    right: 0;
+    position: fixed;
+    margin: 0;
+    z-index: 3000;
+  }
+
+  .toggle_menu.mobile-active:after {
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    font-family: 'rt-icons-2';
+    content: "\e117";
+    font-size: 40px;
+    color: #323232;
+  }
+
+  .toggle_menu.mobile-active span {
+    display: none;
+  }
+
+  .nav-justified > li > a {
+    text-align: left;
+  }
+
+  .sf-menu {
+    position: fixed;
+    overflow: auto;
+    background-color: #ffffff;
+    width: auto;
+    top: 30px;
+    left: 30px;
+    bottom: 30px;
+    right: 30px;
+    padding: 20px;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: 800;
+    word-wrap: break-word;
+    text-align: left;
+  }
+
+  .sf-menu a {
+    color: #323232;
+  }
+
+  .sf-menu ul {
+    list-style: none;
+    padding-left: 10px;
+  }
+
+  .sf-menu ul li a {
+    display: block;
+    padding: 10px;
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  .sf-menu ul li a:before {
+    content: '-';
+    padding-right: 5px;
+  }
+
+  .sf-menu ul ul li a:before {
+    content: '--';
+    padding-right: 5px;
+  }
+  /*** arrows (for all except IE7) **/
+  .sf-arrows .sf-with-ul {
+    padding-right: 2.5em;
+    *padding-right: 1em;
+    /* no CSS arrows for IE7 (lack pseudo-elements) */
+  }
+  /* styling for both css and generated arrows */
+  .sf-arrows .sf-with-ul:after {
+    font-family: 'FontAwesome';
+    content: '\f107';
+    position: absolute;
+    right: 1.44em;
+    height: 0;
+    width: 0;
+    font-size: 20px;
+  }
+  /*top menu level*/
+  .sf-arrows .sfHover > a,
+  .sf-arrows .sfHover > a:hover {
+    color: #ffffff;
+    background-color: #323232;
+  }
+}
+
+@media (max-width: 400px) {
+  .sf-menu {
+    top: 15px;
+    left: 15px;
+    bottom: 15px;
+    right: 15px;
+    padding: 15px 5px;
+  }
+}

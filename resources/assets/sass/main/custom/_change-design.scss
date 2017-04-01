@@ -1,0 +1,50 @@
+footer {
+  .widget-title {
+    font-size: 20px;
+    font-family: $default-font-2;
+    font-weight: 300;
+  }
+}
+
+.widget {
+  &.contact .info {
+    i, span {
+      display: table-cell;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .page_copyright {
+    .socials a {
+      padding-right: 5px;
+    }
+  }
+}
+
+.page_footer {
+  &.ds a:not(.btn) {
+    color: #FFFFFF;
+    &:hover {
+      color: $default-theme-second-color !important;
+    }
+  }
+}
+
+.blog {
+  aside h3 {
+    font-size: 24px;
+  }
+}
+
+.page_topline {
+  .font-size-12 {
+    font-family: $default-font-2;
+  }
+  .phone {
+    font-weight: bold;
+  }
+  .mail a:hover {
+    color: $default-reverse-color;
+  }
+}

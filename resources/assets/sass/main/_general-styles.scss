@@ -1,0 +1,285 @@
+
+/*
+**general styles
+*/
+html {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background-color: $default-theme-color;
+}
+
+::selection {
+  color: #ffffff;
+  background-color: $default-theme-color;
+}
+
+::-moz-selection {
+  color: #ffffff;
+  background-color: $default-theme-color;
+}
+
+body {
+  font-family: $default-font-1;
+  font-size: $default-font-size;
+  font-weight: 400;
+  line-height: $default-line-height;
+  background-color: #ffffff;
+  overflow: visible;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $default-font-3;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+h4 {
+  line-height: 23px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+blockquote {
+  position: relative;
+  margin: 30px 0;
+  padding: 40px 20px 29px 98px;
+  line-height: 1.57;
+  border: none;
+  background-color: #f5f5f5;
+  font-style: italic;
+}
+
+blockquote .media {
+  font-style: normal;
+  margin: 26px 0 16px !important;
+  color: #323232;
+}
+
+blockquote .media img {
+  min-width: 50px;
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+blockquote .media h4 {
+  margin-bottom: -3px;
+}
+
+blockquote:before,
+blockquote:after {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 100px;
+  font-style: normal;
+  content: '\201c';
+  color: $default-theme-color;
+  position: absolute;
+  left: 52px;
+  top: 6px;
+}
+
+@media (max-width: 600px) {
+  blockquote {
+    padding-left: 58px;
+  }
+
+  blockquote:before,
+  blockquote:after {
+    left: 14px;
+  }
+}
+
+.blockquote-big {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: normal;
+  font-size: 24px;
+  text-align: center;
+  line-height: 1.5;
+  color: #323232;
+  padding: 30px 40px;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .blockquote-big {
+    font-size: 20px;
+    max-width: 100%;
+  }
+}
+
+.blockquote-big h3 {
+  font-size: 16px;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: inherit;
+  margin-top: 30px;
+}
+
+.blockquote-big:after {
+  left: auto;
+  right: 0;
+  top: -0px;
+  content: '\201d';
+}
+
+.blockquote-big:before {
+  top: 4px;
+  left: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.panel-body .media-left img {
+  max-width: none;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover {
+  color: $default-reverse-color;
+  text-decoration: none;
+  -webkit-transition: all 0.15s linear 0s;
+  transition: all 0.15s linear 0s;
+}
+
+a:focus {
+  outline: medium none;
+  text-decoration: none;
+}
+
+a img {
+  -webkit-transition: all 0.15s ease-in-out 0s;
+  transition: all 0.15s ease-in-out 0s;
+}
+
+iframe {
+  border: none;
+  max-width: 100%;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/*
+**styled lists
+*/
+ul.list1 {
+  list-style: none;
+  padding: 0;
+  margin: 25px 0;
+}
+
+ul.list1 li {
+  position: relative;
+  padding: 9px 0 10px 30px;
+}
+
+ul.list1 li > .media {
+  margin: 7px 0 7px;
+}
+
+ul.list1.no-bullets li {
+  padding-left: 0;
+}
+
+ul.list1.no-bullets li:before {
+  display: none;
+}
+
+ul.list1 li:first-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul.list1 li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul.list1 li:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid $default-theme-color;
+  left: 10px;
+  top: 22px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+ul.list2 {
+  list-style: none;
+  padding-left: 20px !important;
+}
+
+ul.list2 li {
+  position: relative;
+  padding: 5px 0 5px;
+}
+
+ul.list2 li:before {
+  font-family: 'FontAwesome';
+  content: "\f105";
+  font-size: 16px;
+  color: $default-theme-second-color;
+  display: block;
+  position: absolute;
+  left: -18px;
+}
+
+ol.list3 {
+  counter-reset: li;
+  list-style: none outside none;
+  padding: 0;
+}
+
+ol.list3 li {
+  position: relative;
+  padding: 8px 0 8px 38px;
+}
+
+ol.list3 li:after {
+  content: counter(li, decimal-leading-zero);
+  counter-increment: li;
+  position: absolute;
+  left: 2px;
+  top: 50%;
+  margin-top: -16px;
+  font-weight: 700;
+  color: inherit;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #ffffff;
+  background-color: $default-theme-color;
+  border-radius: 100%;
+}

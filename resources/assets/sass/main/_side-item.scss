@@ -1,0 +1,39 @@
+
+/* common side item */
+.side-item {
+  border: 1px solid #e5e5e5;
+}
+
+.item-content {
+  margin: 34px 40px;
+}
+
+.item-media {
+  margin: -1px 0 0 -1px;
+}
+
+@media (min-width: 992px) {
+  .item-content.left {
+    margin-right: 10px;
+  }
+
+  .item-content.right {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .entry-title {
+    font-size: 28px !important;
+  }
+}
+
+/* events */
+.event-item {
+  margin-bottom: 30px;
+}
+
+.event-item h2 {
+  font-size: 28px;
+  font-weight: 300;
+}

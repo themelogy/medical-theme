@@ -1,0 +1,179 @@
+
+
+/* team side item */
+.team-item.isotope-item {
+  margin-bottom: 30px;
+}
+
+/*vertical tabs*/
+.vertical-tabs .nav > li > a {
+  background-color: $default-reverse-color;
+  color: #ffffff;
+  padding: 9px 60px 9px 16px;
+  margin-bottom: 1px;
+  font-size: 16px;
+  line-height: 2em;
+  position: relative;
+  font-family: $default-font-3;
+}
+
+.vertical-tabs .nav > li > a:after {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'FontAwesome';
+  content: "\f105";
+  position: absolute;
+  font-size: 30px;
+  line-height: 48px;
+  text-align: center;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0;
+}
+
+.vertical-tabs .nav > li.active a,
+.vertical-tabs .nav > li > a:hover {
+  background-color: $default-theme-color;
+}
+
+@media (min-width: 768px) {
+  .vertical-tabs .nav > li.active {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/*price tables*/
+.price-table,
+.price-table ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.price-table {
+  margin: 0;
+}
+
+/* price table with background */
+.bg_teaser .plan-name {
+  background-color: #fefefe;
+}
+
+.bg_teaser .plan-price {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.bg_teaser.color_bg_1 .plan-name h3 {
+  color: $default-theme-color;
+}
+
+.bg_teaser.color_bg_2 .plan-name h3 {
+  color: #6496cf;
+}
+
+.bg_teaser.color_bg_3 .plan-name h3 {
+  color: $default-reverse-color;
+}
+
+.bg_teaser .features-list li + li {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plan-name {
+  padding: 20px 0;
+}
+
+.plan-name h3 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.plan-price {
+  padding: 35px 0 25px;
+  position: relative;
+  /* dollar sign */
+  /* price */
+  /* per month */
+}
+
+.plan-price span:first-child {
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.plan-price span + span {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.plan-price p {
+  display: inline;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.features-list {
+  margin-top: 20px;
+}
+
+.features-list li {
+  margin: 10px 50px;
+  padding-top: 10px;
+}
+
+.call-to-action {
+  padding: 30px 20px 50px;
+}
+
+.price-table.style1 {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.price-table.style1 .features-list li + li {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.price-table.style1 .plan-price {
+  background-color: $default-theme-color;
+  color: #ffffff;
+  margin: 1px -1px;
+}
+
+.price-table.style2 {
+  background-color: #f5f5f5;
+}
+
+.price-table.style2 .plan-name {
+  background-color: $default-theme-color;
+  padding: 30px 0;
+}
+
+.price-table.style2 .plan-name h3 {
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  font-size: 32px;
+}
+
+.price-table.style2 .plan-price {
+  padding-bottom: 0;
+  color: #323232;
+}
+
+.price-table.style2 .enabled:before,
+.price-table.style2 .disabled:before {
+  font-family: 'rt-icons-2';
+  content: "\e621";
+  padding-right: 13px;
+  color: $default-theme-color;
+}
+
+.price-table.style2 .disabled:before {
+  color: #323232;
+  content: "\e622";
+}

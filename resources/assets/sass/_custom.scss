@@ -1,0 +1,111 @@
+$directions : (
+        top : top,
+        bot : bottom,
+        lft : left,
+        rgt : right
+);
+
+@for $i from 0 through 20 {
+  $i : $i * 5;
+  @each $direction-key, $direction-value in $directions {
+    .m-#{$direction-key}-#{$i} {
+      margin-#{$direction-value}: $i+px !important;;
+    }
+  }
+  @each $direction-key, $direction-value in $directions {
+    .p-#{$direction-key}-#{$i} {
+      padding-#{$direction-value}: $i+px !important;;
+    }
+  }
+}
+
+@for $i from 0 through 20 {
+  $i : $i * 5;
+  .margin-#{$i} {
+    margin: $i+px !important;;
+  }
+  .padding-#{$i} {
+    padding: $i+px !important;;
+  }
+}
+
+@for $i from 0 through 20 {
+  $i : $i * 5;
+  .m-top-bot-#{$i} {
+    margin: $i+px 0 !important;
+  }
+  .m-lft-rgt-#{$i} {
+    margin: 0 $i+px !important;;
+  }
+  .p-top-bot-#{$i} {
+    padding: $i+px 0 !important;;
+  }
+  .p-lft-rgt-#{$i} {
+    padding: 0 $i+px !important;;
+  }
+}
+
+@for $i from 0 through 30 {
+  .font-size-#{$i} {
+    font-size: $i+px !important;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.modal-btn {
+  font-family: $default-font-2;
+  position: fixed;
+  z-index: 100;
+  right: 60px;
+  padding-left:60px;
+  bottom: 5px;
+  height: 50px;
+  background: $default-theme-color;
+  &:hover, &:active, &:focus {
+    background: $default-reverse-color;
+    .question-icon {
+      color: $default-reverse-color;
+    }
+  }
+  @include border-radius(0);
+  .question-icon {
+    font-size: 26px;
+    position: absolute;
+    top: 0;
+    padding: 7px;
+    width: 48px;
+    height: 47px;
+    left: 0;
+    color: $default-theme-color;
+    background: $default-theme-second-color;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .pull-right-xs {
+    float: right !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pull-right-xs {
+    float: left !important;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .pull-right-md {
+    float: right !important;
+  }
+}

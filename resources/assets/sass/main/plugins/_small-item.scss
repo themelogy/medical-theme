@@ -1,0 +1,85 @@
+
+/* small item */
+.small-item {
+  text-align: center;
+}
+
+.small-item .item-image {
+  position: relative;
+}
+
+.small-item .item-image h3 {
+  position: absolute;
+  bottom: 26px;
+  right: 20px;
+  left: 20px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.small-item .progress {
+  margin: 0;
+}
+
+.small-item .row {
+  position: relative;
+  margin-top: 24px;
+}
+
+.small-item .row strong {
+  font-size: 30px;
+}
+
+.small-item .row strong .highlight {
+  font-size: 50px;
+}
+
+@media (max-width: 500px) {
+  .small-item .row strong .highlight {
+    font-size: 30px;
+  }
+}
+
+.small-item .row .col-xs-6 > span {
+  margin: -8px 0 20px;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.small-item .of {
+  position: absolute;
+  font-style: italic;
+  font-weight: 400;
+  left: 50%;
+  top: 30px;
+  margin-left: -12px;
+}
+
+.small-item .of:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 1px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+
+article.small-item .row {
+  margin: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+article.small-item .col-xs-6 {
+  padding: 34px 0 0;
+}
+
+article.small-item .col-xs-6 + .col-xs-6 {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}

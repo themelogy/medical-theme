@@ -1,0 +1,172 @@
+
+/*alignment*/
+.display_table {
+  display: table;
+  min-width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.display_table_cell {
+  display: table-cell;
+  vertical-align: middle;
+  float: none;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.columns_padding_0 [class*="col-"] {
+  padding: 0;
+}
+
+@media (min-width: 500px) {
+  .columns_padding_25 .row {
+    margin-right: -25px;
+    margin-left: -25px;
+  }
+
+  .columns_padding_25 [class*="col-"] {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.not_found {
+  font-size: 300px;
+  font-weight: 700;
+  line-height: 0.7;
+  letter-spacing: -0.04em;
+}
+
+.not_found + h2 {
+  font-size: 48px;
+  margin: 54px 0 0px;
+}
+
+.not_found + h2 + h3 {
+  margin: 14px 0 42px;
+}
+
+@media (min-width: 1200px) {
+  .text-lg-right {
+    text-align: right;
+  }
+
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  .display_table_lg {
+    display: table;
+    min-width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .display_table_cell_lg {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+    overflow: hidden;
+    zoom: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .text-md-right {
+    text-align: right;
+  }
+
+  .text-md-left {
+    text-align: left;
+  }
+
+  .text-md-center {
+    text-align: center;
+  }
+
+  .display_inline_md {
+    display: inline;
+  }
+
+  .display_table_md {
+    display: table;
+    min-width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .display_table_cell_md {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+    overflow: hidden;
+    zoom: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .text-sm-right {
+    text-align: right;
+  }
+
+  .text-sm-left {
+    text-align: left;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+
+  .display_table_sm {
+    display: table;
+    min-width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+
+  .display_table_cell_sm {
+    display: table-cell;
+    vertical-align: middle;
+    float: none;
+    overflow: hidden;
+    zoom: 1;
+  }
+
+  .big {
+    font-size: 50px;
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 767px) {
+  .text-xs-right {
+    text-align: right;
+  }
+
+  .text-xs-left {
+    text-align: left;
+  }
+
+  .text-xs-center {
+    text-align: center;
+  }
+
+  .not_found {
+    font-size: 130px;
+  }
+}
+
+.inline-dropdown {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inline-dropdown > li {
+  display: inline-block;
+}

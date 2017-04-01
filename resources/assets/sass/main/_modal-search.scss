@@ -1,0 +1,56 @@
+
+/* modal search */
+.modal-open .page_header_wrapper,
+.modal-open .page_header.affix {
+  right: 16px;
+}
+
+#search_modal {
+  color: #fff;
+}
+
+#search_modal a {
+  color: #ffffff;
+  opacity: 0.6;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+#search_modal a:hover {
+  color: $default-theme-color;
+  opacity: 1;
+}
+
+#search_modal .searchform-respond {
+  width: 300px;
+  margin: 20px auto;
+}
+
+#search_modal .form-control {
+  border: none;
+  background-color: transparent;
+  height: 60px;
+  color: #ffffff;
+}
+
+#search_modal .theme_button {
+  padding: 18px;
+}
+
+#search_modal .form-control:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+#search_modal .form-control::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+#search_modal .form-control:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+#search_modal .form-control::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}

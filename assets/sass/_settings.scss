@@ -1,0 +1,32 @@
+$theme-colors: (
+        green1: #0f6f39,
+        yellow1: #fbb03b,
+        grey1: #565a60,
+        grey2: #4b4e53,
+        grey3: #414146,
+        grey4: #808080,
+        blue1: #59B1D7,
+        blue2: #005999,
+        blue3: #005D8C,
+        blue4: #00719c,
+        blue5: #0d5dac,
+        blue6: #4a5996,
+        purple1: #7370B5,
+        purple2: #731472,
+        purple3: #b54878,
+        purple4: #9e1f63,
+        purple5: #8b467b,
+        turquose1: #00ACA2
+);
+
+$default-theme-color: map_get($theme-colors, blue4);
+$default-reverse-color: map_get($theme-colors, purple5);
+$default-theme-second-color: map_get($theme-colors, yellow1);
+$default-offset-color: map_get($theme-colors, blue1);
+
+$default-font-1: "Open Sans", sans-serif;
+$default-font-2: "Montserrat", sans-serif;
+$default-font-3: "Oswald", sans-serif;
+
+$default-font-size: 14px;
+$default-line-height: 20px;

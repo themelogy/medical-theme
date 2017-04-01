@@ -1,0 +1,108 @@
+/*collapse accordion*/
+.panel-heading .panel-title {
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 0;
+  position: relative;
+}
+
+.panel-heading .panel-title > a {
+  line-height: 1;
+  display: block;
+  padding: 17px 65px 17px 30px;
+  color: #ffffff;
+  background-color: $default-reverse-color;
+  border: none;
+  word-wrap: break-word;
+}
+
+.panel-heading .panel-title > a.collapsed:hover,
+.panel-heading .panel-title > a:hover {
+  color: #ffffff;
+  background-color: $default-reverse-color;
+}
+
+.panel-heading .panel-title > a.collapsed {
+  background-color: $default-theme-color;
+}
+
+.panel-heading .panel-title > a:after {
+  color: #ffffff;
+  content: '+';
+  position: absolute;
+  font-size: 30px;
+  line-height: 48px;
+  text-align: center;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  letter-spacing: 0;
+}
+
+.panel-heading .panel-title > a.collapsed:after {
+  content: '-';
+  line-height: 40px;
+  font-size: 40px;
+}
+
+.panel-heading .panel-title > a.icon-tab:after {
+  font-size: 0;
+  color: transparent;
+}
+
+.panel-heading .panel-title > a.icon-tab > i {
+  font-size: 28px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.panel {
+  box-shadow: none;
+}
+
+.panel-group .panel {
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.panel-default > .panel-heading {
+  background-color: transparent;
+  color: inherit;
+  position: relative;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+.panel-default {
+  border-color: transparent;
+}
+
+.panel-group .panel + .panel {
+  margin-top: 0;
+}
+
+.panel-body {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none !important;
+}
+
+.panel-body .media-left {
+  padding-top: 8px;
+  padding-right: 28px;
+}
+
+.panel-body .media-left .img-circle {
+  max-width: 50px;
+}
+
+.panel-group .panel-heading + .panel-collapse .panel-body {
+  padding: 23px 30px 30px;
+  border-radius: 0px;
+}

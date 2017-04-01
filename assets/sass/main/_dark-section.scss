@@ -1,0 +1,481 @@
+
+/**common dark and color sections - .ds and .ds.cs*/
+.ds {
+  /* blog */
+  /* single blog post */
+  /* shortcodes */
+  /* shop */
+}
+
+.ds h1,
+.ds h2,
+.ds h3,
+.ds h4,
+.ds h5,
+.ds h6 {
+  color: #ffffff;
+}
+
+.ds h1 a,
+.ds h2 a,
+.ds h3 a,
+.ds h4 a,
+.ds h5 a,
+.ds h6 a {
+  color: #ffffff;
+}
+
+.ds h1 a:hover,
+.ds h2 a:hover,
+.ds h3 a:hover,
+.ds h4 a:hover,
+.ds h5 a:hover,
+.ds h6 a:hover {
+  color: $default-theme-color;
+}
+
+.ds a {
+  color: $default-theme-color;
+}
+
+.ds a:hover {
+  color: #ffffff !important;
+}
+
+.ds hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds blockquote, .ds .blockquote {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: #2d2d2d;
+}
+
+.ds .theme_button {
+  color: #ffffff;
+}
+
+.ds .theme_button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.ds .theme_button:hover, .ds .theme_button:focus {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #323232;
+}
+
+.ds .theme_button.inverse {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.ds .theme_button.inverse:after {
+  display: none;
+}
+
+.ds .theme_button.inverse:hover, .ds .theme_button.inverse:focus {
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.ds .with_background, .ds .well {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ds .with_border {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .grey, .ds .black {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.ds.with_top_border:before, .ds.with_bottom_border:after {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .section_header + p {
+  color: inherit;
+}
+
+.ds .form-control {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds form label + [class*="icon-"] {
+  color: #ffffff;
+}
+
+.ds .form-group-select:before {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .form-control:-moz-placeholder {
+  color: #b2b2b2;
+  opacity: 1;
+}
+
+.ds .form-control::-moz-placeholder {
+  color: #b2b2b2;
+  opacity: 1;
+}
+
+.ds .form-control:-ms-input-placeholder {
+  color: #b2b2b2;
+}
+
+.ds .form-control::-webkit-input-placeholder {
+  color: #b2b2b2;
+}
+
+.ds .contact-form.transparent-background .form-control {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .border-paragraphs p {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ds .table,
+.ds .table-bordered,
+.ds .table th,
+.ds .table td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .table-striped > tbody > tr:nth-child(odd),
+.ds .table-striped > tbody > tr:nth-child(odd) > td,
+.ds .table-striped > tbody > tr:nth-child(odd) > th {
+  border-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ds .color-icon.bg-icon:before {
+  background-color: #ffffff;
+}
+
+.ds .color-icon.bg-icon:hover:before {
+  color: #ffffff !important;
+}
+
+.ds .color-bg-icon:hover:before {
+  background-color: $default-theme-color;
+}
+
+.ds .tab-content, .ds .nav-tabs > li > a {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.ds .nav-tabs > li.active > a, .ds .nav-tabs > li.active > a:hover, .ds .nav-tabs > li.active > a:focus {
+  border-color: $default-theme-color;
+  border-bottom-color: transparent;
+  background-color: $default-theme-color;
+  color: #ffffff;
+}
+
+.ds #isotope_filters a, .ds .filters a {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .price-table {
+  border-color: rgba(255, 255, 255, 0.1);
+  outline-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .price-table.style2 {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ds .plan-name {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ds .plan-price p {
+  color: #ffffff;
+}
+
+.ds .features-list .disabled:before {
+  color: #ffffff;
+}
+
+.ds ul.list1 {
+  color: #ffffff;
+}
+
+.ds ul.list1 li {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .greylinks a {
+  color: #b5b5b5;
+}
+
+.ds .greylinks a:hover {
+  color: $default-reverse-color;
+}
+
+.ds .darklinks a {
+  color: #ffffff;
+}
+
+.ds .darklinks a:hover {
+  color: $default-reverse-color;
+}
+
+.ds a.logo {
+  color: #ffffff;
+}
+
+.ds a.logo:hover {
+  color: #e6e6e6;
+}
+
+.ds.blog-single .post {
+  background-color: transparent;
+}
+
+.ds.blog-single .post .entry-header {
+  color: #b5b5b5;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds.blog-single .post .entry-header span {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds.blog-single .post .entry-title a {
+  color: inherit;
+}
+
+.ds.blog-single .post .entry-excerpt {
+  color: #b5b5b5;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .post-content {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .blog-grid-post-meta {
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .owl-theme .owl-dots .owl-dot span {
+  background-color: #ffffff;
+}
+
+.ds .testimonials-carousel .media + p {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ds .side-item,
+.ds .blog-item .from-blog-social {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 992px) {
+  .ds.blog article.post .date {
+    color: inherit;
+  }
+}
+
+.ds .entry-excerpt {
+  color: #ffffff;
+}
+
+.ds .comment-meta {
+  color: #ffffff;
+}
+
+.ds .comment-meta .author_url {
+  color: #ffffff;
+}
+
+.ds .comment-list article:after {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .comment-respond {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .entry-tags {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .widget_shopping_cart .cart_list,
+.ds .widget_recent_entries li,
+.ds .widget_recent_comments li,
+.ds .widget_archive li,
+.ds .widget_categories li,
+.ds .widget_meta li,
+.ds .widget_nav_menu li,
+.ds .widget_pages li,
+.ds .widget_popular_entries li {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.ds .widget_nav_menu ul ul {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .widget_popular_entries .media-heading {
+  color: #ffffff;
+}
+
+.ds .widget_recent_entries a:before, .ds .widget_archive a:before, .ds .widget_categories a:before, .ds .widget_meta a:before, .ds .widget_nav_menu a:before, .ds .widget_pages a:before {
+  color: #ffffff;
+}
+
+.ds .tweet_list li + li .tweet_right {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .widget_tag_cloud a {
+  color: #ffffff;
+}
+
+.ds #calendar_wrap {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .widget_calendar table {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .widget_calendar tfoot td a {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .widget_calendar caption,
+.ds .widget_calendar thead,
+.ds .widget_calendar th {
+  color: #ffffff;
+}
+
+.ds .widget_calendar tbody td a:hover {
+  color: #ffffff;
+}
+
+.ds .grid-view h3:before, .ds .grid-view h3:after {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .price {
+  color: #ffffff;
+}
+
+.ds .owl-carousel.product-thumbnails .owl-nav > div:after {
+  color: #ffffff;
+}
+
+.ds .ui-slider {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.ds .ui-slider .ui-slider-handle {
+  background-color: #ffffff;
+}
+
+.ds #sort_view {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.ds #toggle_shop_view.grid-view:after, .ds #toggle_shop_view:before {
+  background-color: #2a2a2a;
+}
+
+.ds .widget_layered_nav .color-filters a:before {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds aside .widget a {
+  color: #ffffff;
+}
+
+.ds .pagination > li > a, .ds .pagination > li > span {
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  background-color: transparent;
+}
+
+.ds .pagination > li > a:hover,
+.ds .pagination > li > span:hover,
+.ds .pagination > li > a:focus,
+.ds .pagination > li > span:focus,
+.ds .pagination > .active > a,
+.ds .pagination > .active > span,
+.ds .pagination > .active > a:hover,
+.ds .pagination > .active > span:hover,
+.ds .pagination > .active > a:focus,
+.ds .pagination > .active > span:focus {
+  border-color: $default-reverse-color;
+  background-color: $default-reverse-color;
+  color: #ffffff;
+}
+
+.ds .thumbnail {
+  background-color: transparent;
+}
+
+.ds .thumbnail h3 a {
+  color: #ffffff;
+}
+
+.ds .thumbnail .caption {
+  border-color: transparent;
+  background-color: #2f2f2f;
+}
+
+.ds .progress {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .panel-group .panel-heading + .panel-collapse .panel-body {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.ds .entry-meta .comments-link a {
+  color: #ffffff;
+}
+
+.ds #timetable tbody th,
+.ds #timetable tbody td {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/**dark section - .ds*/
+.ds {
+  background-color: #323232;
+  color: #989898;
+}
+
+/**darkgrey section - .ds.ms*/
+.ds.ms {
+  background-color: darken(mix($default-reverse-color, $default-theme-color, 25%), 5%);
+  color: #b5b5b5;
+}
+
+.ds.ms .section_header + p {
+  color: #b2b2b2 !important;
+}
+
+.ds.ms.darkgrey_lighter {
+  background-color: #3a3a3a;
+}

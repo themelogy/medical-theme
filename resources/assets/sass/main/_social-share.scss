@@ -1,0 +1,148 @@
+.mobile-social-share {
+  max-width: 200px;
+  display: block;
+  //border: 1px solid lightgrey;
+  .btn {
+    padding: 5px 12px 6px 12px;
+    margin-bottom: 1px;
+  }
+  h3 {
+    color: $default-theme-color;
+    float: left !important;
+    font-size: 15px;
+    margin: 0;
+    padding: 7px 10px;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: $default-theme-color;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: $default-theme-color;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: $default-theme-color;
+    text-transform: uppercase;
+  }
+  .share-group {
+    float: right !important;
+    margin: 0;
+  }
+
+  .btn-group {
+    display: inline-block;
+    font-size: 0;
+    position: relative;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  ul {
+    float: right;
+    list-style: none outside none;
+    margin: 0;
+    min-width: 61px;
+    padding: 0;
+    @include border-radius(0, !important);
+    li {
+      display: block;
+      font-size: 18px;
+      list-style: none outside none;
+      margin-bottom: 3px;
+      margin-left: 4px;
+      margin-top: 3px;
+    }
+  }
+  .share {
+    min-width: 17px;
+  }
+  .btn-share {
+    background-color: #BEBEBE;
+    color: #333333;
+    border-style: inset !important;
+  }
+
+  .button-social {
+    width: 51px;
+    color:#ffffff !important;
+    @include border-radius(0);
+  }
+  .btn-info {
+    background-color: $default-theme-color !important;
+    @include border-radius(0, !important);
+  }
+
+  .btn-twitter {
+    background-color: #3399CC !important;
+    @extend .button-social;
+  }
+
+  .btn-facebook {
+    background-color: #3D5B96 !important;
+    @extend .button-social;
+  }
+
+  .btn-facebook {
+    background-color: #3D5B96 !important;
+    @extend .button-social;
+  }
+
+  .btn-google {
+    background-color: #DD3F34 !important;
+    @extend .button-social;
+  }
+
+  .btn-linkedin {
+    background-color: #1884BB !important;
+    @extend .button-social;
+  }
+
+  .btn-pinterest {
+    background-color: #CC1E2D !important;
+    @extend .button-social;
+  }
+
+  .btn-mail {
+    background-color: #FFC90E !important;
+    @extend .button-social;
+  }
+}
+
+.caret {
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-top: 4px solid;
+  display: inline-block;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  width: 0;
+}
+
+#socialShare {
+  max-width:59px;
+  > a {
+    padding: 5px 10px 6px 10px;
+  }
+}
+
+@media (max-width : 320px) {
+  #socialHolder{
+    padding-left:5px;
+    padding-right:5px;
+    margin-left:5px;
+    margin-right:5px;
+  }
+
+  .mobile-social-share {
+    h3 {
+      margin-left: 15px;
+      margin-right: 0;
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width : 238px) {
+  .mobile-social-share h3 {
+    font-size: 12px;
+  }
+}

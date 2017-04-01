@@ -1,0 +1,76 @@
+/*
+**icons
+*/
+a[class*='soc-'] {
+  font-size: 0;
+  color: transparent;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+a[class*='soc-'] + a[class*='soc-'],
+.tooltip + a[class*='soc-'] {
+  margin-left: 20px;
+}
+
+a[class*='soc-'].bg-icon + a[class*='soc-'].bg-icon {
+  margin-left: 7px;
+}
+
+a[class*='soc-']:before {
+  font-family: 'socicon';
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #b2b2b2;
+  display: inline-block;
+  -webkit-transition: all 0.6s linear 0s;
+  transition: all 0.6s linear 0s;
+}
+
+a[class*='soc-']:hover:before {
+  -webkit-transition: all 0.05s linear 0s;
+  transition: all 0.05s linear 0s;
+}
+
+a.border-icon:before {
+  border: 1px solid #b2b2b2;
+  padding: 15px;
+  margin-bottom: 4px;
+}
+
+a.bg-icon:before {
+  color: #ffffff;
+  background-color: #b2b2b2;
+  padding: 16px;
+  margin-bottom: 4px;
+}
+
+a.bg-icon:hover:before {
+  color: #ffffff !important;
+}
+
+a.color-bg-icon:before {
+  color: #ffffff;
+  background-color: #b2b2b2;
+  margin-bottom: 4px;
+  padding: 16px;
+}
+
+a.color-bg-icon:hover:before {
+  background-color: #323232;
+  color: #ffffff !important;
+}
+
+a.color-icon:hover:before {
+  color: #323232 !important;
+}
+
+a.color-icon.border-icon:hover:before {
+  color: #ffffff !important;
+}
+
+a[class*='soc-'].rounded-icon:before {
+  border-radius: 50%;
+}

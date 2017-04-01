@@ -1,0 +1,37 @@
+
+/*bs buttons*/
+.btn-custom {
+  padding: 10px 10px;
+  text-transform: uppercase;
+  margin: 0 2px 6px 0;
+  border: none;
+  border-radius: 0;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+  &.theme {
+    background: mix($default-theme-color, $default-reverse-color, 70%);
+    color: #fff !important;
+    &:hover {
+      background: lighten(mix($default-theme-color, $default-reverse-color, 70%), 25%);
+      color: #fff !important;
+    }
+  }
+  &.btn-small {
+    padding: 5px 5px;
+    font-size: 10px;
+  }
+}
+
+.btn-rounded-5 {
+  @include border-radius(5px, !important);
+}
+.btn-rounded-10 {
+  @include border-radius(10px, !important);
+}
+
+li.media:before,
+li.media:after {
+  display: block;
+  content: '';
+  clear: both;
+}

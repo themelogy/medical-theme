@@ -1,0 +1,38 @@
+.language {
+  float: right;
+  > .dropdown-toggle {
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none !important;
+    color: $default-theme-color !important;
+    &:hover {
+      cursor: pointer !important;
+    }
+  }
+  .dropdown-menu {
+    @include border-radius(5px);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 120px !important;
+    > .active > a, a:focus, a:hover {
+      background: $default-theme-color;
+    }
+    li {
+      a {
+        padding: 5px 20px !important;
+        &:hover {
+          background: lighten(map_get($theme-colors, grey1), 50%);
+          color: map_get($theme-colors, grey1);
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .language {
+    float: none;
+    margin: 0 auto;
+  }
+}

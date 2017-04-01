@@ -1,0 +1,21 @@
+
+/* dropdown menu */
+.dropdown-menu {
+  box-shadow: none;
+  border-radius: 0;
+  border-color: rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+[class*="right"] .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+  color: #323232;
+  background-color: transparent;
+}

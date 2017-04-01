@@ -1,0 +1,43 @@
+
+/* gallery single */
+.gallery-items-nav {
+  margin-top: 60px;
+}
+
+.gallery-items-nav h4 {
+  margin: -5px 0 0;
+}
+
+.gallery-items-nav .media {
+  position: relative;
+  padding: 10px 0;
+}
+
+.gallery-items-nav .next-item img {
+  max-width: none;
+  padding: 0 30px 0 0;
+}
+
+.gallery-items-nav .next-item i {
+  right: 0;
+}
+
+.gallery-items-nav .prev-item img {
+  max-width: none;
+  padding: 0 0 0 30px;
+}
+
+.gallery-items-nav .prev-item i {
+  left: 0;
+}
+
+.gallery-items-nav a {
+  position: relative;
+}
+
+.gallery-items-nav a i {
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  font-size: 23px;
+}

@@ -1,0 +1,2 @@
+<h3 class="widget-title">{{ setting('theme::company-name') }}</h3>
+<p>Consetetur sadipscing elitr, sed dinonumy eirmod tempor ut labore edolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum stet clita kasd gubergren.</p>
