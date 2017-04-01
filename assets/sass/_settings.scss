@@ -16,7 +16,10 @@ $theme-colors: (
         purple3: #b54878,
         purple4: #9e1f63,
         purple5: #8b467b,
-        turquose1: #00ACA2
+        turquose1: #00ACA2,
+        royalblue1: #27408B,
+        blueberry: #5971AD,
+        skyblue6: #4b82cd
 );
 
 $default-theme-color: map_get($theme-colors, blue4);

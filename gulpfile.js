@@ -29,30 +29,30 @@ elixir.extend('stylistPublish', function() {
 
 elixir(function (mix) {
 
-    mix.sass('bootstrap.scss', cssPath + '/bootstrap.min.css')
-       .sass('main.scss', cssPath + '/main.min.css');
+//    mix.sass('bootstrap.scss', cssPath + '/bootstrap.min.css')
+//       .sass('main.scss', cssPath + '/main.min.css');
+//
+//    mix.version([
+//        'css/all.min.css'
+//    ], themePath);
 
-    mix.version([
-        'css/all.min.css'
-    ], themePath);
+     mix.del(['assets/css', 'assets/js']);
+     mix.del(themePath+'/**');
 
-//     mix.del(['assets/css', 'assets/js']);
-//     mix.del(themePath+'/**');
-//
-//     mix.sass('bootstrap.scss', 'resources/assets/css/bootstrap.min.css')
-//         .sass('main.scss', 'resources/assets/css/main.min.css');
-//
-//     mix.styles([
-//        'bootstrap.min.css',
-//        'main.min.css'
-//     ], 'resources/assets/css/all.min.css');
-//
-//     mix.copy('resources/assets', 'assets');
-//
-//     mix.version([
-//         'css/all.min.css'
-//     ], 'assets');
-//
-//     mix.stylistPublish();
+     mix.sass('bootstrap.scss', 'resources/assets/css/bootstrap.min.css')
+         .sass('main.scss', 'resources/assets/css/main.min.css');
+
+     mix.styles([
+        'bootstrap.min.css',
+        'main.min.css'
+     ], 'resources/assets/css/all.min.css');
+
+     mix.copy('resources/assets', 'assets');
+
+     mix.version([
+         'css/all.min.css'
+     ], 'assets');
+
+     mix.stylistPublish();
 
 });
