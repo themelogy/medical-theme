@@ -55,12 +55,16 @@
                 </div>
             </div>
 
+            @php $menu = app(\Modules\Menu\Repositories\MenuRepository::class)->findBySlug('clinic') @endphp
+
+            @if(isset($menu))
             <div class="col-md-3 col-sm-6">
                 <div class="widget widget_text contact">
-                    <h3 class="widget-title"><i class="fa fa-stethoscope"></i> {{ app(\Modules\Menu\Repositories\MenuRepository::class)->findBySlug('clinic')->title }}</h3>
+                    <h3 class="widget-title"><i class="fa fa-stethoscope"></i> {{ $menu->title }}</h3>
                     {!! Menu::render('clinic', \Modules\Theme\Presenters\Medical\FooterMenuLinksPresenter::class) !!}
                 </div>
             </div>
+            @endif
 
             <div class="col-md-3 col-sm-6">
                 <div class="widget widget_text contact">

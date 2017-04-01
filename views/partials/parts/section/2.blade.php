@@ -11,6 +11,7 @@
                 <div class="panel-group" id="accordion">
 
                     @php $page = Page::find(2); @endphp
+                    @if(isset($page))
                     @foreach($page->children()->get() as $service)
                         <div class="panel panel-default">
                             <div class="panel-heading">
@@ -36,7 +37,7 @@
                             </div>
                         </div>
                     @endforeach
-
+                    @endif
                 </div>
 
             </div>
