@@ -5,12 +5,7 @@
 <![endif]-->
 
 <link rel="icon" href="{{ Theme::url('images/favicon.ico') }}">
-{!! Theme::style('css/bootstrap.min.css') !!}
-{!! Theme::style('css/main.min.css') !!}
-{!! Theme::style('css/animations.css') !!}
-{!! Theme::style('css/fonts.css') !!}
-{!! Theme::style('vendor/layerslider/css/layerslider.css') !!}
-{!! Theme::style('vendor/flag-icon-css/css/flag-icon.min.css') !!}
+{!! Theme::style('css/all.min.css') !!}
 {!! Theme::script('js/vendor/modernizr-2.6.2.min.js') !!}
 @stack('styles')
 
