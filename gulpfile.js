@@ -36,27 +36,28 @@ elixir(function (mix) {
 //        'css/all.min.css'
 //    ], themePath);
 
-     mix.del(['assets/css', 'assets/js']);
-     mix.del(themePath+'/**');
+    mix.del(['assets/css', 'assets/js']);
+    mix.del(themePath+'/**');
 
-     mix.sass('bootstrap.scss', 'resources/assets/css/bootstrap.min.css')
-         .sass('main.scss', 'resources/assets/css/main.min.css');
+    mix.sass('bootstrap.scss', 'resources/assets/css/bootstrap.min.css')
+        .sass('main.scss', 'resources/assets/css/main.min.css');
 
-    mix.copy('resources/assets', 'assets');
+    mix.copy('resources/assets', 'assets')
+        .copy('resources/assets/vendor/flag-icon-css/flags', 'assets/flags');
 
-     mix.styles([
+    mix.styles([
         'bootstrap.min.css',
         'main.min.css',
         'animations.css',
         'fonts.css',
         '../vendor/layerslider/css/layerslider.css',
         '../vendor/flag-icon-css/css/flag-icon.min.css'
-     ], 'resources/assets/css/all.min.css');
+    ], 'resources/assets/css/all.min.css');
 
-     mix.version([
-         'css/all.min.css'
-     ], 'assets');
+    mix.version([
+        'css/all.min.css'
+    ], 'assets');
 
-     mix.stylistPublish();
+    mix.stylistPublish();
 
 });
