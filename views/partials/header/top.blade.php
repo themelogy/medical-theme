@@ -52,6 +52,9 @@
                                         case 'store.category.slug':
                                         $url = $category->present()->url($locale);
                                         break;
+                                        case 'employee.view':
+                                        $url = $employee->present()->url($locale);
+                                        break;
                                         default:
                                         $url = null;
                                         break;
