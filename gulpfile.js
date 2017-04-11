@@ -54,6 +54,10 @@ elixir(function (mix) {
         '../vendor/flag-icon-css/css/flag-icon.min.css'
     ], 'resources/assets/css/all.min.css');
 
+    mix.scripts([
+        'main.js'
+    ], 'resources/assets/js/main.min.js');
+
     mix.version([
         'css/all.min.css'
     ], 'assets');

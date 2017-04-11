@@ -22,7 +22,7 @@
 @stack('css_inline')
 
 {!! Theme::script('js/compressed.js') !!}
-{!! Theme::script('js/main.js') !!}
+{!! Theme::script('js/main.min.js') !!}
 
 {!! Asset::js() !!}
 @stack('scripts')
