@@ -28,6 +28,8 @@
 @stack('scripts')
 @stack('js_inline')
 
+@include('partials.analytics')
+
 <script type="text/javascript">
     var LHCChatOptions = {};
     LHCChatOptions.opt = {widget_height:340,widget_width:300,popup_height:520,popup_width:500};
