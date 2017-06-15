@@ -150,7 +150,7 @@
                                                     </a>
                                                     <div class="media-body">
                                                         <p class="post-date media-heading">
-                                                            <i class="rt-icon2-calendar2 highlight2"></i> {{ $article->created_at->formatLocalized('d F Y') }}
+                                                            <i class="rt-icon2-calendar2 highlight2"></i> {{ $article->created_at->formatLocalized('%d %B %Y') }}
                                                         </p>
                                                         <h4 class="m-bot-5"><a href="{{ $article->url }}">{{ $article->title }}</a></h4>
                                                         <p>{!! Str::words(strip_tags($article->intro),15) !!}</p>

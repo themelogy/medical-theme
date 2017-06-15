@@ -25,12 +25,13 @@
                                 <div class="panel-body">
                                     <div class="media">
                                         <div class="media-left">
-                                            <a href="#">
+                                            <a href="{{ $service->url }}">
                                                 <img src="{{ $service->present()->firstImage(80,80,'fit',80) }}" alt="{{ $page->title }}">
                                             </a>
                                         </div>
                                         <div class="media-body">
-                                            {!! \Str::words(\Patchwork\Utf8::toAscii($service->body), 15) !!}
+                                            {!! \Str::words(\Patchwork\Utf8::toAscii($service->body), 15) !!}<br/>
+                                            <a href="{{ $service->url }}">{{ trans('global.buttons.read more') }}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -82,8 +83,8 @@
                                     <div class="entry-meta-corner">
                                     <span class="date">
                                         <time datetime="{{ $latest->created_at }}" class="entry-date">
-                                            <strong class="m-bot-10">{{ $latest->created_at->formatLocalized('d') }}</strong>
-                                            {{ $latest->created_at->formatLocalized('F') }}
+                                            <strong class="m-bot-10">{{ $latest->created_at->formatLocalized('%d') }}</strong>
+                                            {{ $latest->created_at->formatLocalized('%B') }}
                                         </time>
                                     </span>
                                     </div>

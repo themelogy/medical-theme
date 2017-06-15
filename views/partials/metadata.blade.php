@@ -7,6 +7,7 @@
 <link rel="icon" href="{{ Theme::url('images/favicon.ico') }}">
 {!! Theme::style('css/all.min.css') !!}
 {!! Theme::script('js/vendor/modernizr-2.6.2.min.js') !!}
+
 @stack('styles')
 
 <!--[if lt IE 9]>
