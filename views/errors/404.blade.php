@@ -1,8 +1,11 @@
-@extends('layouts.master')
+@extends('layouts.layout')
 
 @section('breadcrumbs')
-    <?php seo_helper()->setTitle(trans('core::core.error 404')) ?>
-    @include('partials.parts.breadcrumbs', ['title'=>trans('core::core.error 404').' : '.trans('core::core.error 404 title'), 'breadcrumbs'=>'page'])
+    @php
+        $title = '404 '.trans('page::messages.page not found');
+        seo_helper()->setTitle($title);
+    @endphp
+    @include('partials.parts.breadcrumbs', ['title'=>$title, 'breadcrumbs'=>'page'])
 @endsection
 
 @section('content')
@@ -11,14 +14,14 @@
             <div class="row">
                 <div class="col-sm-12 text-center">
                     <p class="not_found">
-                        <span class="highlight">{{ trans('core::core.error 404') }}</span>
+                        <span class="highlight">404</span>
                     </p>
-                    <h2>{{ trans('core::core.error 404 title') }}</h2>
+                    <h2>{{ trans('page::messages.page not found') }}!</h2>
                     <h3 class="thin">
-                        <span class="highlight2">{{ trans('core::core.error 404 description') }}</span>
+                        <span class="highlight2">{!! trans("themes::messages.404 link error") !!}</span>
                     </h3>
                     <p>
-                        <a href="{{ Page::findHomepage()->url }}" class="theme_button">{{ Page::findHomepage()->title }}</a>
+                        <a href="{{ route('homepage') }}" class="theme_button">{{ trans('page::messages.return homepage') }}</a>
                     </p>
                 </div>
             </div>

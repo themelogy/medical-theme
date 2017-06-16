@@ -11,7 +11,7 @@
                 <div class="col-sm-12">
                     @if($page->hasImage())
                     <div class="thumbnail pull-right m-lft-20 m-bot-20">
-                        <img class="img-thumbnail" src="{{ $page->present()->firstImage(400, 400, 'resize', 80) }}" alt="{{ $page->title }}" />
+                        <img class="img-thumbnail" src="{{ $page->present()->firstImage(400, null, 'fit', 80) }}" alt="{{ $page->title }}" />
                     </div>
                     @endif
                     {!! $page->body !!}

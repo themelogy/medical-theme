@@ -35,24 +35,22 @@
                             <li @if($locale==LaravelLocalization::getCurrentLocale()) class="active" @endif>
                                 @php
                                     switch (Request::route()->getName()) {
-                                        case 'page':
+                                        case 'page' && isset($page):
                                         $url = $page->present()->url($locale);
                                         break;
-                                        case 'news.slug':
-                                        case 'blog.slug':
+                                        case 'news.slug' && isset($post):
+                                        case 'blog.slug' && isset($post):
                                         $url = $post->present()->url($locale);
                                         break;
-                                        case 'news.category':
-                                        case 'blog.category':
+                                        case 'news.category' && isset($category):
+                                        case 'blog.category' && isset($category):
+                                        case 'store.category.slug' && isset($category):
                                         $url = $category->present()->url($locale);
                                         break;
-                                        case 'store.product.slug':
+                                        case 'store.product.slug' && isset($product):
                                         $url = $product->present()->url($locale);
                                         break;
-                                        case 'store.category.slug':
-                                        $url = $category->present()->url($locale);
-                                        break;
-                                        case 'employee.view':
+                                        case 'employee.view' && isset($employee):
                                         $url = $employee->present()->url($locale);
                                         break;
                                         default:
@@ -62,7 +60,7 @@
                                     $localizedUrl = LaravelLocalization::getLocalizedURL($locale, $url);
                                 @endphp
 
-                                <a lang="{!! $locale !!}" href="{{ $localizedUrl }}"><span class="flag-icon flag-icon-{{ $locale == "en" ? "us" : $locale }}"></span> {!! $supportedLocale['native'] !!}</a>
+                                <a rel="alternate" hreflang="{!! $locale !!}" href="{{ $localizedUrl }}"><span class="flag-icon flag-icon-{{ $locale == "en" ? "us" : $locale }}"></span> {!! $supportedLocale['native'] !!}</a>
                             </li>
                         @endforeach
                     </ul>

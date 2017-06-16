@@ -1,17 +1,30 @@
-@extends('layouts.master')
+@extends('layouts.layout')
 
 @section('breadcrumbs')
-    @include('partials.parts.breadcrumbs', ['title'=>$page->title, 'breadcrumbs'=>'page'])
+    @php
+        $title = '500 Sistem Hatası';
+        seo_helper()->setTitle($title);
+    @endphp
+    @include('partials.parts.breadcrumbs', ['title'=>$title, 'breadcrumbs'=>'page'])
 @endsection
 
 @section('content')
-    <div class="error-page">
-        <h2 class="headline text-red" style="line-height: 0.6; margin-top: 0;"> 500</h2>
-
-        <div class="error-content">
-            <h3><i class="fa fa-warning text-red"></i> {{ trans('core::core.error 500 title') }}</h3>
-            <p>{!! trans('core::core.error 500 description') !!}</p>
+    <section id="content" class="ls section_padding_100">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <p class="not_found">
+                        <span class="highlight">500</span>
+                    </p>
+                    <h2>Sistem Hatası!</h2>
+                    <h3 class="thin">
+                        <span class="highlight2">Hatayla ilgili site yöneticisine bilgi verebilirsiniz</span>
+                    </h3>
+                    <p>
+                        <a href="{{ route('homepage') }}" class="theme_button">{{ trans('page::messages.return homepage') }}</a>
+                    </p>
+                </div>
+            </div>
         </div>
-        <!-- /.error-content -->
-    </div>
+    </section>
 @stop

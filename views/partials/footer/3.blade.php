@@ -74,8 +74,3 @@
         </div>
     </div>
 </footer>
-
-{!! Asset::add(mix('assets/css/app.css')->toHtml()) !!}
-{!! Asset::add(mix('assets/js/manifest.js')->toHtml()) !!}
-{!! Asset::add(mix('assets/js/vendor.js')->toHtml()) !!}
-{!! Asset::add(mix('assets/js/app.js')->toHtml()) !!}

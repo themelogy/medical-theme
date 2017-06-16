@@ -39,7 +39,7 @@
 
         <div class="entry-content">
             <div class="thumbnail pull-right m-lft-20 m-bot-20">
-                <img class="img-thumbnail" src="{{ $post->present()->firstImage(400, 400, 'resize', 80) }}" alt="{{ $post->title }}" />
+                <img class="img-thumbnail" src="{{ $post->present()->firstImage(400, null, 'fit', 80) }}" alt="{{ $post->title }}" />
             </div>
             {!! $post->content !!}
 

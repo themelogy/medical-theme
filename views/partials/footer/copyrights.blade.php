@@ -17,6 +17,14 @@
             <div class="col-sm-12 text-center">
                 <p class="font-size-14">{!! trans('themes::theme.copyrights', ['name'=>setting('theme::company-name'), 'url'=>url(locale()), 'date'=>Carbon::now()->format('Y'), 'powered'=>'Qbicom Digital']) !!}</p>
             </div>
+            <div class="col-sm-12 text-center font-size-10">
+                @if($privacy = Page::findBySlug('gizlilik-politikasi'))
+                <a href="{{ $privacy->url }}">{{ $privacy->title }}</a>
+                @endif
+                @if($terms = Page::findBySlug('hizmet-sartlari'))
+                <a href="{{ $terms->url }}">{{ $terms->title }}</a>
+                @endif
+            </div>
         </div>
     </div>
 </section>
