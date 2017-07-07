@@ -6,7 +6,7 @@
 
             <div class="col-md-4">
 
-                <h2 class="widget-title">{{ trans('themes::theme.title.services') }}</h2>
+                <h1 class="widget-title">{{ trans('themes::theme.title.services') }}</h1>
 
                 <div class="panel-group" id="accordion">
 
@@ -60,7 +60,7 @@
                                     <p class="text-center social-icons">
                                         <?php $socials = ['facebook', 'instagram', 'twitter', 'google', 'linkedin']; ?>
                                         @foreach($socials as $social)
-                                            @if(isset($employee->{$social}))
+                                            @if(@empty($employee->{$social}))
                                                 <a class="soc-{{ $social }}" href="{{ $employee->{$social} }}"
                                                    title="{{ ucfirst($social) }}" data-toggle="tooltip">#</a>
                                             @endif
@@ -76,7 +76,7 @@
             <div class="col-md-4">
                 <h2 class="widget-title">{{ trans('blog::post.title.recent posts') }}</h2>
                 <div class="owl-carousel" data-dots="true" data-loop="true" data-autoplay="3000" data-items="1" data-responsive-lg="1" data-responsive-md="1">
-                    @foreach(Blog::latest(5) as $latest)
+                    @foreach(Blog::latest(10) as $latest)
                         <div class="item">
                             <article class="post format-standard">
                                 <div class="entry-thumbnail">
@@ -88,7 +88,7 @@
                                         </time>
                                     </span>
                                     </div>
-                                    <img src="{{ $latest->present()->firstImage(400,250,'fit',80) }}" alt="">
+                                    <img src="{{ $latest->present()->firstImage(400,250,'fit',80) }}" alt="{{ $latest->title }}">
                                 </div>
                                 <div class="post-content" style="padding: 20px;">
                                     <div class="entry-content">

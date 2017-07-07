@@ -1,22 +1,23 @@
 <article class="post format-standard">
 
-    <div class="entry-thumbnail">
-
-        <div class="entry-meta-corner">
+    @if($image = $post->present()->firstImage(850,300,'fit',80))
+        <div class="entry-thumbnail">
+            <div class="entry-meta-corner">
 										<span class="date">
 											<time datetime="2014-12-09T15:05:23+00:00" class="entry-date">
 												<strong>{{ $post->created_at->format('d') }}</strong>
 											</time>
 										</span>
-            <span class="comments-link">
+                <span class="comments-link">
                                             <strong>
-                                                <small>{{ $post->created_at->formatLocalized('%F') }}</small>
+                                                <small>{{ $post->created_at->formatLocalized('%B') }}</small>
                                             </strong>
 										</span>
-        </div>
+            </div>
 
-        <img src="{{ $post->present()->firstImage(850,300,'fit',80) }}" alt="{{ $post->title }}">
-    </div>
+            <img src="{{ $image }}" alt="{{ $post->title }}">
+        </div>
+    @endif
 
     <div class="post-content">
         <div class="entry-content">

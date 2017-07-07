@@ -38,9 +38,11 @@
         <!-- .entry-header -->
 
         <div class="entry-content">
-            <div class="thumbnail pull-right m-lft-20 m-bot-20">
-                <img class="img-thumbnail" src="{{ $post->present()->firstImage(400, null, 'fit', 80) }}" alt="{{ $post->title }}" />
-            </div>
+            @if($image = $post->present()->firstImage(400, 400, 'resize', 80))
+                <div class="thumbnail pull-right m-lft-20 m-bot-20">
+                    <img class="img-thumbnail" src="{{ $image }}" alt="{{ $post->title }}" />
+                </div>
+            @endif
             {!! $post->content !!}
 
             <div class="row m-top-50">

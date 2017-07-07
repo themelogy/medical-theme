@@ -9,6 +9,7 @@
                 <span class="toggle_menu"><span></span></span>
             </div>
             <div class="col-lg-9 col-md-8 text-right">
+                @if(setting('theme::search'))
                 <div class="widget widget_search">
                     <form role="search" method="get" id="searchform" class="searchform form-inline" action="/">
                         <div class="form-group">
@@ -18,6 +19,7 @@
                         <button type="submit" id="searchsubmit" class="theme_button">Search</button>
                     </form>
                 </div>
+                @endif
                 <!-- main nav start -->
                 <nav class="mainmenu_wrapper">
                     {!! Menu::render('header', \Modules\Theme\Presenters\Medical\HeaderMenuPresenter::class) !!}

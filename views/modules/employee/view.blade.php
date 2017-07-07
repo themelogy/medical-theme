@@ -17,7 +17,7 @@
                     <p class="social-icons">
                         <?php $socials = ['facebook', 'instagram', 'twitter', 'google', 'linkedin']; ?>
                         @foreach($socials as $social)
-                            @if(isset($employee->{$social}))
+                            @if(@empty($employee->{$social}))
                                 <a class="soc-{{ $social }}" href="{{ $employee->{$social} }}"
                                    title="{{ ucfirst($social) }}" data-toggle="tooltip">#</a>
                             @endif
@@ -143,7 +143,7 @@
                                 @if($employee->user->blogposts()->exists())
                                     <div class="tab-pane fade" id="tab3">
                                         <ul class="media-list">
-                                            @foreach($employee->user->blogposts()->orderBy('created_at', 'desc')->get()->take(10) as $article)
+                                            @foreach($employee->user->blogposts()->orderBy('created_at', 'desc')->where('status', 2)->get()->take(10) as $article)
                                                 <li class="media">
                                                     <a class="media-left" href="{{ $article->url }}">
                                                         <img class="img-thumbnail media-object" src="{{ $article->present()->firstImage(80,80,'fit',80) }}" alt="{{ $article->title }}">

@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <a href="{{ url(locale()) }}" class="logo vertical_logo grey">
-                    <img src="{{ Theme::url('images/logo-'.locale().'.svg') }}" alt="">
+                <a target="_blank" href="https://www.brandsoftheworld.com/logo/cihangir-cakici-klinik" class="logo vertical_logo grey">
+                    <img src="{{ Theme::url('images/logo-'.locale().'.svg') }}" alt="{{ setting('theme::company-name') }}" />
                 </a>
             </div>
             <div class="col-sm-12 text-center socials">

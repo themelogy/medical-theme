@@ -177,7 +177,7 @@
   }
 
   .sf-menu ul a:hover,
-  .sf-menu ul li.active a {
+  .sf-menu ul li.active > a {
     color: $default-theme-second-color;
   }
   .sf-menu ul li ul a:hover,
