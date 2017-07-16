@@ -1,15 +1,9 @@
 <section id="about" class="ls section_padding_25 columns_padding_25">
     <div class="container">
-
         <div class="row">
-
-
             <div class="col-md-4">
-
                 <h1 class="widget-title">{{ trans('themes::theme.title.services') }}</h1>
-
                 <div class="panel-group" id="accordion">
-
                     @php $page = Page::find(2); @endphp
                     @if(isset($page))
                         @foreach($page->children()->get() as $service)
@@ -40,78 +34,17 @@
                         @endforeach
                     @endif
                 </div>
-
             </div>
-
             <div class="col-md-4">
-                <h2 class="widget-title">{{ trans('themes::employee.title') }}</h2>
-                <div class="owl-carousel" data-dots="true" data-loop="true" data-autoplay="4000" data-items="1" data-responsive-lg="1" data-responsive-md="1">
-                    @foreach(app(\Modules\Employee\Repositories\EmployeeRepository::class)->all() as $employee)
-                        <div class="item">
-                            <div class="thumbnail">
-                                <a href="{{ $employee->url }}">
-                                    <img src="{{ $employee->present()->firstImage(400,250,'fit',80) }}" alt="{{ $employee->fullname }}">
-                                </a>
-                                <div class="caption">
-                                    <h3>
-                                        <a href="{{ $employee->url }}">{{ $employee->fullname }}</a>
-                                    </h3>
-                                    <p>{{ $employee->position }}</p>
-                                    <p class="text-center social-icons">
-                                        <?php $socials = ['facebook', 'instagram', 'twitter', 'google', 'linkedin']; ?>
-                                        @foreach($socials as $social)
-                                            @if(@empty($employee->{$social}))
-                                                <a class="soc-{{ $social }}" href="{{ $employee->{$social} }}"
-                                                   title="{{ ucfirst($social) }}" data-toggle="tooltip">#</a>
-                                            @endif
-                                        @endforeach
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
+                @component('partials.parts.post.latest', ['posts'=>News::latest(10)])
+                {{ trans('themes::news.title') }}
+                @endcomponent
             </div>
-
             <div class="col-md-4">
-                <h2 class="widget-title">{{ trans('blog::post.title.recent posts') }}</h2>
-                <div class="owl-carousel" data-dots="true" data-loop="true" data-autoplay="3000" data-items="1" data-responsive-lg="1" data-responsive-md="1">
-                    @foreach(Blog::latest(10) as $latest)
-                        <div class="item">
-                            <article class="post format-standard">
-                                <div class="entry-thumbnail">
-                                    <div class="entry-meta-corner">
-                                    <span class="date">
-                                        <time datetime="{{ $latest->created_at }}" class="entry-date">
-                                            <strong class="m-bot-10">{{ $latest->created_at->formatLocalized('%d') }}</strong>
-                                            {{ $latest->created_at->formatLocalized('%B') }}
-                                        </time>
-                                    </span>
-                                    </div>
-                                    <img src="{{ $latest->present()->firstImage(400,250,'fit',80) }}" alt="{{ $latest->title }}">
-                                </div>
-                                <div class="post-content" style="padding: 20px;">
-                                    <div class="entry-content">
-                                        <header class="entry-header">
-                                            <h3 class="entry-title m-bot-10" style="font-size: 20px;">
-                                                <a href="{{ $latest->url }}" rel="bookmark">{{ $latest->title }}</a>
-                                            </h3>
-                                        </header>
-                                        <!-- .entry-header -->
-                                        {{ Str::words(strip_tags($latest->intro),15) }}
-                                        <a href="{{ $latest->url }}">{{ trans('global.buttons.read more') }}</a>
-
-                                    </div>
-                                    <!-- .entry-content -->
-
-                                </div>
-                                <!-- .post-content -->
-                            </article>
-                        </div>
-                    @endforeach
-                </div>
+                @component('partials.parts.post.latest', ['posts'=>Blog::latest(10)])
+                    {{ trans('themes::blog.title') }}
+                @endcomponent
             </div>
-
         </div>
     </div>
 </section>
