@@ -10,7 +10,7 @@
 										</span>
                 <span class="comments-link">
                                             <strong>
-                                                <small>{{ $post->created_at->formatLocalized('%B') }}</small>
+                                                <small>{{ $post->created_at->formatLocalized("%B") }}</small>
                                             </strong>
 										</span>
             </div>

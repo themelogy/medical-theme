@@ -7,8 +7,8 @@
                     <div class="entry-meta-corner">
                         <span class="date">
                             <time datetime="{{ $post->created_at }}" class="entry-date">
-                                <strong class="m-bot-10">{{ $post->created_at->formatLocalized('%d') }}</strong>
-                                {{ $post->created_at->formatLocalized('%B') }}
+                                <strong class="m-bot-10">{{ $post->created_at->formatLocalized("%d") }}</strong>
+                                {{ $post->created_at->formatLocalized("%B") }}
                             </time>
                         </span>
                     </div>

@@ -27,7 +27,7 @@
                 <span class="date">
                     <time datetime="2015-03-09T15:05:23+00:00" class="entry-date">
                         <i class="rt-icon2-calendar5 highlight2"></i>
-                        {{ $post->created_at->formatLocalized('%d %B %Y') }}
+                        {{ $post->created_at->formatLocalized("%d %B %Y") }}
                     </time>
                 </span>
             </div>

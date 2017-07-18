@@ -33,7 +33,7 @@
                     </a>
                     <div class="media-body">
                         <p class="post-date media-heading">
-                            <i class="rt-icon2-calendar2 highlight2"></i> {{ $popular->created_at->formatLocalized('%d %B %Y') }}
+                            <i class="rt-icon2-calendar2 highlight2"></i> {{ $popular->created_at->formatLocalized("%d %B %Y") }}
                         </p>
                         <p>
                             <a href="{{ $popular->url }}">{{ $popular->title }}</a>

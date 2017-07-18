@@ -5,12 +5,12 @@
         <div class="entry-meta-corner">
             <span class="date">
                 <time datetime="2014-12-09T15:05:23+00:00" class="entry-date">
-                    <strong>{{ $post->created_at->formatLocalized('%d') }}</strong>
+                    <strong>{{ $post->created_at->formatLocalized("%d") }}</strong>
                 </time>
             </span>
             <span class="comments-link">
                 <strong>
-                    <small>{{ $post->created_at->formatLocalized('%B') }}</small>
+                    <small>{{ $post->created_at->formatLocalized("%B") }}</small>
                 </strong>
             </span>
         </div>
