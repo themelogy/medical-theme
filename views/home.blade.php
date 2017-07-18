@@ -7,6 +7,10 @@
 
     @include('partials.parts.section.2')
 
+    <hr class="m-top-0 m-bot-0" />
+
+    @include('partials.parts.section.3')
+
     @if('load'==1)
 
         @include('partials.parts.banner.2')

@@ -1,5 +1,5 @@
 <?php
 
 return [
-  'title' => 'Data Bank'
+  'title' => 'News'
 ];

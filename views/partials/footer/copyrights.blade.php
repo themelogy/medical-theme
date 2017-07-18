@@ -2,9 +2,15 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center">
-                <a target="_blank" href="https://www.brandsoftheworld.com/logo/cihangir-cakici-klinik" class="logo vertical_logo grey">
-                    <img src="{{ Theme::url('images/logo-'.locale().'.svg') }}" alt="{{ setting('theme::company-name') }}" />
-                </a>
+                @if(file_exists(base_path('public/themes/medical/images/logo-'.locale().'.svg')))
+                    <a target="_blank" href="{{ url(locale()) }}" class="logo vertical_logo grey">
+                        <img src="{{ Theme::url('images/logo-'.locale().'.svg') }}" alt="{{ setting('theme::company-name') }}" />
+                    </a>
+                @else
+                    <a target="_blank" href="{{ url(locale()) }}" class="logo vertical_logo grey">
+                        <img src="{{ Theme::url('images/logo-en.svg') }}" alt="{{ setting('theme::company-name') }}" />
+                    </a>
+                @endif
             </div>
             <div class="col-sm-12 text-center socials">
                 <?php $socials = ['twitter', 'facebook', 'google', 'instagram', 'linkedin', 'youtube', 'pinterest']; ?>
@@ -19,10 +25,10 @@
             </div>
             <div class="col-sm-12 text-center font-size-10">
                 @if($privacy = Page::findBySlug('gizlilik-politikasi'))
-                <a href="{{ $privacy->url }}">{{ $privacy->title }}</a>
+                    <a href="{{ $privacy->url }}">{{ $privacy->title }}</a>
                 @endif
                 @if($terms = Page::findBySlug('hizmet-sartlari'))
-                <a href="{{ $terms->url }}">{{ $terms->title }}</a>
+                    <a href="{{ $terms->url }}">{{ $terms->title }}</a>
                 @endif
             </div>
         </div>
