@@ -27,7 +27,7 @@
 
                 <div class="dropdown m-lft-10 language">
                     <a class="dropdown-toggle p-bot-0 m-bot-0" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" title="Dil Seçiniz">
-                        <span class="flag-icon flag-icon-{{ LaravelLocalization::getCurrentLocale() == "en" ? "us" : LaravelLocalization::getCurrentLocale() }}"></span> {{ LaravelLocalization::getCurrentLocale() }}
+                        <span class="flag-icon flag-icon-{{ LaravelLocalization::getCurrentLocale() == "en" ? "us" : LaravelLocalization::getCurrentLocale() }}"></span> {{ LaravelLocalization::getCurrentLocaleNative() }}
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu margin-0 padding-0" style="top: 90%; font-size: 13px;">

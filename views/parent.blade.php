@@ -5,14 +5,14 @@
 @endsection
 
 @section('content')
-    <section class="ls section_padding_50">
+    <section class="ls section_padding_50 page_parent">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="row">
                         @foreach($page->children()->get() as $page)
                                 <div class="col-sm-6 col-md-4">
-                                    <div class="thumbnail" style="min-height:520px;">
+                                    <div class="thumbnail">
                                         <img class="img-thumbnail" src="{{ $page->present()->firstImage(null, 250, 'resize', 80) }}" alt="{{ $page->title }}" style="height:240px;" />
                                         <div class="caption" style="min-height: 260px;">
                                             <h3>{{ $page->title }}</h3>
@@ -28,3 +28,19 @@
         </div>
     </section>
 @stop
+
+@push('css_inline')
+<style>
+.page_parent .row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+.page_parent .row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+</style>
+@endpush

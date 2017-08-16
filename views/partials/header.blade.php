@@ -35,3 +35,16 @@
         </div>
     </div>
 </header>
+
+@if(\App::getLocale()=='ru')
+@push('css_inline')
+<style>
+@media (min-width: 992px) {
+	.sf-menu > li > a {
+		letter-spacing: -0.03em !important;
+		font-size: 13px !important;
+	}
+}
+</style>
+@endpush
+@endif

@@ -26,7 +26,7 @@
                                         </a>
                                     </div>
                                     <div class="media-body">
-                                        {!! \Str::words(\Patchwork\Utf8::toAscii($page->body), 15) !!}<br/>
+                                        {!! \Str::words(strip_tags($page->body), 15) !!}<br/>
                                         <a href="{{ $page->url }}">{{ trans('global.buttons.read more') }}</a>
                                     </div>
                                 </div>
