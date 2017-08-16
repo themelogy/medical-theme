@@ -3,7 +3,7 @@
 return [
     'title'        => 'Blog',
     'titles'       => [
-      'recent posts' => 'Blog'
+      'recent posts' => 'Son Yazılar'
     ],
     'author posts' => ':author yazıları',
     'tags'         => 'Etiketler'

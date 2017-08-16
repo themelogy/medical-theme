@@ -2,6 +2,9 @@
 
 return [
     'title'        => 'Blog',
-    'author posts' => ':author articles',
-    'tags'         => 'Tags',
+    'titles'       => [
+        'recent posts' => 'Recent Posts'
+    ],
+    'author posts' => ':author posts',
+    'tags'         => 'Tags'
 ];
