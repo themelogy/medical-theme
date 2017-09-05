@@ -19,7 +19,7 @@
                 </span>
                 -->
                 <span class="font-size-12 phone">
-                    <i class="fa fa-phone highlight"></i> {!! setting('theme::phone') !!}
+                    <i class="fa fa-whatsapp font-size-14" style="color: darkgreen; font-weight: bold;"></i> {!! setting('theme::mobile') !!}
                 </span>
                 <span class="font-size-12 mail">
                     <i class="fa fa-envelope highlight"></i> <a href="mailto:{!! Html::email(setting('theme::email')) !!}">{!! Html::email(setting('theme::email')) !!}</a>
