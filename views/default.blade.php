@@ -5,7 +5,7 @@
 @endsection
 
 @php
-if(isset($page->parent->children)) $children = $page->parent->children;
+    if(isset($page->parent->children)) $children = $page->parent->children;
 @endphp
 
 @section('content')
@@ -15,7 +15,7 @@ if(isset($page->parent->children)) $children = $page->parent->children;
                 <div class="@if(isset($children)) col-sm-9 @else col-sm-12 @endif">
                     @if($page->hasImage())
                         <div class="thumbnail pull-right m-lft-20 m-bot-20">
-                            <img class="img-thumbnail" src="{{ $page->present()->firstImage(400, null, 'fit', 80) }}" alt="{{ $page->title }}"/>
+                            <img class="img-thumbnail" src="{{ $page->present()->firstImage(400, null, 'resize', 80) }}" alt="{{ $page->title }}"/>
                         </div>
                     @endif
                     {!! $page->body !!}
@@ -29,17 +29,17 @@ if(isset($page->parent->children)) $children = $page->parent->children;
                 </div>
 
                 @if(isset($children))
-                <div class="col-sm-3">
-                    <div class="widget widget_categories">
-                        <ul>
-                            @foreach($children as $child)
-                                <li>
-                                    <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
-                                </li>
-                            @endforeach
-                        </ul>
+                    <div class="col-sm-3">
+                        <div class="widget widget_categories">
+                            <ul>
+                                @foreach($children as $child)
+                                    <li>
+                                        <a href="{{ $child->url }}" title="{{ $child->title }}">{{ $child->title }}</a>
+                                    </li>
+                                @endforeach
+                            </ul>
+                        </div>
                     </div>
-                </div>
                 @endif
 
                 @php

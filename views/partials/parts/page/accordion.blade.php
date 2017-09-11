@@ -2,9 +2,9 @@
     @php $menu = app(\Modules\Menu\Repositories\MenuRepository::class)->findBySlug($menu) @endphp
     @if(isset($menu))
         @if(@$heading=='h1')
-            <h1 class="widget-title">{{ $menu->title }}</h1>
+            <h1 class="widget-title" style="font-size:18px;">{{ $menu->title }}</h1>
         @else
-            <h2 class="widget-title">{{ $menu->title }}</h2>
+            <h2 class="widget-title" style="font-size:18px;">{{ $menu->title }}</h2>
         @endif
         <div class="panel-group" id="accordion{{ $menu->id }}">
             @foreach(app(\Modules\Menu\Repositories\MenuItemRepository::class)->rootsForMenu($menu->id) as $menuItem)
@@ -12,7 +12,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h3 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion{{ $menu->id }}" href="#collapse{{ $page->id }}" @if(!$loop->first)class="collapsed" @endif>
+                                <a style="font-size:14px; line-height:16px;" data-toggle="collapse" data-parent="#accordion{{ $menu->id }}" href="#collapse{{ $page->id }}" @if(!$loop->first)class="collapsed" @endif>
                                     {{ $page->title }}
                                 </a>
                             </h3>
