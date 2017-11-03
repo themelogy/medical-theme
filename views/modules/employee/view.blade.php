@@ -140,7 +140,7 @@
                                 </div>
                             @endif
                             @if($employee->user()->exists())
-                                @if($employee->user->blogposts()->exists())
+                                @if(Blog::authorPosts($employee->user()->id, 10))
                                     <div class="tab-pane fade" id="tab3">
                                         <ul class="media-list">
                                             @foreach($employee->user->blogposts()->orderBy('created_at', 'desc')->where('status', 2)->get()->take(10) as $article)
