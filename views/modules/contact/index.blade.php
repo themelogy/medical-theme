@@ -76,6 +76,67 @@
                         </li>
 
                     </ul>
+                    @if($locations = app(\Modules\Location\Repositories\LocationRepository::class)->all())
+                        @foreach($locations as $location)
+                            <h4 class="module-header font-size-20">{{ $location->name }}</h4>
+                    <ul class="list1 no-bullets">
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="highlight2 size_small">
+                                        <i class="rt-icon2-location-outline"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    {!! $location->present()->address !!}
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="highlight2 size_small">
+                                        <i class="rt-icon2-phone-outline"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    {!! $location->phone1 !!}
+                                </div>
+                            </div>
+                        </li>
+
+                        @if(!empty($location->fax))
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="highlight2 size_small">
+                                        <i class="rt-icon2-printer2"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    {!! $location->phone !!}
+                                </div>
+                            </div>
+                        </li>
+                        @endif
+
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <div class="highlight2 size_small">
+                                        <i class="rt-icon2-mail2"></i>
+                                    </div>
+                                </div>
+                                <div class="media-body">
+                                    <a href="mailto:{!! Html::email($location->email) !!}">{!! Html::email($location->email) !!}</a>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
