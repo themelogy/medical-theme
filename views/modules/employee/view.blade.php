@@ -4,6 +4,12 @@
     @include('partials.parts.breadcrumbs', ['title'=>$employee->fullname, 'breadcrumbs'=>'employee.view'])
 @endsection
 
+@php
+    if(isset($employee->user->id)):
+        $articles = Blog::authorPosts($employee->user->id, 10);
+    endif;
+@endphp
+
 @section('content')
     <section id="content" class="ls section_padding_top_50 section_padding_bottom_50">
         <div class="container">
@@ -113,7 +119,7 @@
                                 </li>
                             @endif
                             @if($employee->user()->exists())
-                                @if($employee->user->blogposts()->exists())
+                                @if(count($articles)>0)
                                     <li>
                                         <a href="#tab3" role="tab"
                                            data-toggle="tab">{{ trans('themes::employee.articles') }}</a>
@@ -140,10 +146,10 @@
                                 </div>
                             @endif
                             @if($employee->user()->exists())
-                                @if(Blog::authorPosts($employee->user()->id, 10))
+                                @if(count($articles)>0)
                                     <div class="tab-pane fade" id="tab3">
                                         <ul class="media-list">
-                                            @foreach($employee->user->blogposts()->orderBy('created_at', 'desc')->where('status', 2)->get()->take(10) as $article)
+                                            @foreach($articles as $article)
                                                 <li class="media">
                                                     <a class="media-left" href="{{ $article->url }}">
                                                         <img class="img-thumbnail media-object" src="{{ $article->present()->firstImage(80,80,'fit',80) }}" alt="{{ $article->title }}">
