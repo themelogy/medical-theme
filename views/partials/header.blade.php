@@ -36,10 +36,24 @@
     </div>
 </header>
 
+@push('css_inline')
+<style>
+@media only screen and (max-width: 1024px) {
+    .sf-menu > li > a {
+        letter-spacing: -0.03em !important;
+        font-size: 12px !important;
+    }
+    .acredited div a {
+        font-size: 12px !important;
+    }
+}
+</style>
+@endpush
+
 @if(\App::getLocale()=='ru')
 @push('css_inline')
 <style>
-@media (min-width: 992px) {
+@media only screen and (max-width: 992px) {
 	.sf-menu > li > a {
 		letter-spacing: -0.03em !important;
 		font-size: 13px !important;
