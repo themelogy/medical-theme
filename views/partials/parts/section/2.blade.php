@@ -2,13 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                @include('partials.parts.page.accordion', ['menu'=>'tup-bebek', 'heading'=>'h1'])
+                @menuItems('tup-bebek', 'home.accordion')
             </div>
             <div class="col-md-4">
-                @include('partials.parts.page.accordion', ['menu'=>'tup-bebek-tedavisi', 'heading'=>'h2'])
+                @menuItems('tup-bebek-tedavisi', 'home.list')
             </div>
             <div class="col-md-4">
-                @include('partials.parts.page.accordion', ['menu'=>'kadin-sagligi-ve-dogum', 'heading'=>'h2'])
+                @menuItems('kadin-sagligi-ve-dogum', 'home.list')
             </div>
         </div>
     </div>

@@ -26,6 +26,7 @@ $default-theme-color: map_get($theme-colors, blue4);
 $default-reverse-color: map_get($theme-colors, purple5);
 $default-theme-second-color: map_get($theme-colors, yellow1);
 $default-offset-color: map_get($theme-colors, blue1);
+$muted : map_get($theme-colors, grey4);
 
 $default-font-1: "Open Sans", sans-serif;
 $default-font-2: "Montserrat", sans-serif;

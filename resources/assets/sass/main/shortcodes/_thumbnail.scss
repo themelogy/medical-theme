@@ -18,10 +18,10 @@
 }
 
 .thumbnail h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-family: $default-font-3;
   margin-bottom: 2px;
-  color: #323232;
+  color: darken($muted, 10%);
 }
 
 .thumbnail h3 a {
@@ -34,9 +34,10 @@
 }
 
 .thumbnail h3 + p {
-  color: $default-theme-color;
-  font-family: $default-font-3;
+  color: $muted;
+  font-family: $default-font-1;
   margin-bottom: 10px;
+  font-weight: normal;
 }
 
 .thumbnail .caption {

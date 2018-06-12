@@ -4,14 +4,12 @@
 
         <div class="entry-meta-corner">
             <span class="date">
-                <time datetime="2014-12-09T15:05:23+00:00" class="entry-date">
-                    <strong>{{ $post->created_at->formatLocalized("%d") }}</strong>
+                <time datetime="{{ $post->created_at->toAtomString() }}" class="entry-date">
+                    <span>{{ $post->created_at->formatLocalized("%d") }}</span>
                 </time>
             </span>
             <span class="comments-link">
-                <strong>
-                    <small>{{ $post->created_at->formatLocalized("%B") }}</small>
-                </strong>
+                <small>{{ $post->created_at->formatLocalized("%B") }}</small>
             </span>
         </div>
 

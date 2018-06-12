@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    @include('partials.home.slider.1')
+    @themeSlide()
 
     @include('partials.home.slider-bottom.1')
 

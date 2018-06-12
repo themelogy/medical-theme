@@ -1,23 +1,20 @@
 <article class="post format-standard">
 
-    @if($image = $post->present()->firstImage(850,300,'fit',80))
-        <div class="entry-thumbnail">
-            <div class="entry-meta-corner">
-										<span class="date">
-											<time datetime="2014-12-09T15:05:23+00:00" class="entry-date">
-												<strong>{{ $post->created_at->format('d') }}</strong>
-											</time>
-										</span>
-                <span class="comments-link">
-                                            <strong>
-                                                <small>{{ $post->created_at->formatLocalized("%B") }}</small>
-                                            </strong>
-										</span>
-            </div>
+    <div class="entry-thumbnail">
 
-            <img src="{{ $image }}" alt="{{ $post->title }}">
+        <div class="entry-meta-corner">
+            <span class="date">
+                <time datetime="{{ $post->created_at->toAtomString() }}" class="entry-date">
+                    <span>{{ $post->created_at->formatLocalized("%d") }}</span>
+                </time>
+            </span>
+            <span class="comments-link">
+                <small>{{ $post->created_at->formatLocalized("%B") }}</small>
+            </span>
         </div>
-    @endif
+
+        <img src="{{ $post->present()->firstImage(850,300,'fit',80) }}" alt="{{ $post->title }}">
+    </div>
 
     <div class="post-content">
         <div class="entry-content">
@@ -28,19 +25,20 @@
                 </h2>
 
                 <div class="entry-meta">
-
-                    <span class="author">
+                    @if(isset($post->author))
+                        <span class="author">
                         <i class="rt-icon2-user2 highlight2"></i>
                         <a href="{{ route('blog.author', [$post->author->slug]) }}">{{ $post->author->fullname }}</a>
                     </span>
-
-                    <span class="categories">
+                    @endif
+                    @if(isset($post->category))
+                        <span class="categories">
                         <i class="fa fa-folder-open-o hightlight2"></i>
                         <a href="{{ $post->category->url }}">{{ $post->category->name }}</a>
                     </span>
-
+                    @endif
                     @if($post->tags()->exists())
-                    <span class="categories-links">
+                        <span class="categories-links">
                         <i class="rt-icon2-tag5 highlight2"></i>
                             @foreach($post->tags()->get() as $tag)
                                 <a rel="category" href="{{ $tag->url }}">{{ $tag->name }}</a>@if(!$loop->last), @endif
@@ -56,7 +54,7 @@
             {!! $post->intro !!}
 
             <p class="post-button">
-                <a href="{{ $post->url }}" class="theme_button inverse">{{ trans('global.buttons.read more') }}</a>
+                <a href="{{ $post->url }}" class="theme_button color1 inverse">{{ trans('global.buttons.read more') }}</a>
             </p>
 
         </div>

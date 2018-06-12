@@ -5,14 +5,10 @@
                 @include('partials.parts.employee.employee')
             </div>
             <div class="col-md-4">
-                @component('partials.parts.post.latest', ['posts'=>News::latest(10)])
-                {{ trans('themes::news.title') }}
-                @endcomponent
+                @newsLatestPosts(10, 'home-owl')
             </div>
             <div class="col-md-4">
-                @component('partials.parts.post.latest', ['posts'=>Blog::latest(10)])
-                {{ trans('themes::blog.titles.recent posts') }}
-                @endcomponent
+                @blogLatestPosts(10, 'home-owl')
             </div>
         </div>
     </div>

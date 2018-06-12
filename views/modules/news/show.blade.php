@@ -16,7 +16,7 @@
 
                 <span class="author">
                     <i class="rt-icon2-user2 highlight2"></i>
-                    <a href="#">{{ $post->author->fullname }}</a>
+                    <a href="{{ $post->author->url }}">{{ $post->author->fullname }}</a>
                 </span>
 
                 <span class="categories-links">
@@ -37,7 +37,7 @@
         <!-- .entry-header -->
 
         <div class="entry-content">
-            @if($image = $post->present()->firstImage(400, 400, 'resize', 80))
+            @if($image = $post->present()->firstImage(400, null, 'resize', 80))
             <div class="thumbnail pull-right m-lft-20 m-bot-20">
                 <img class="img-thumbnail" src="{{ $image }}" alt="{{ $post->title }}" />
             </div>
