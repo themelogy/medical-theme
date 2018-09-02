@@ -1,23 +1,3 @@
-<script type="text/javascript">
-    WebFontConfig = {
-        google: {
-            families: [
-                'Open Sans:200,300,400,500,600,700:latin-ext',
-                'Oswald:200,300,400,500,600,700:latin-ext',
-                'Montserrat:200,300,400,500,600,700:latin-ext'
-            ]
-        }
-    };
-    (function () {
-        var wf = document.createElement('script');
-        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
-        wf.type = 'text/javascript';
-        wf.async = 'true';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(wf, s);
-    })();
-</script>
-
 {!! Asset::css() !!}
 @stack('css_inline')
 
@@ -70,12 +50,32 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
- fbq('init', '109172473138068'); 
+ fbq('init', '109172473138068');
 fbq('track', 'PageView');
 </script>
 <noscript>
- <img height="1" width="1" 
+ <img height="1" width="1"
 src="https://www.facebook.com/tr?id=109172473138068&ev=PageView
 &noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
+
+<script type="text/javascript">
+    WebFontConfig = {
+        google: {
+            families: [
+                'Open Sans:200,300,400,500,600,700:latin-ext',
+                'Oswald:200,300,400,500,600,700:latin-ext',
+                'Montserrat:200,300,400,500,600,700:latin-ext'
+            ]
+        }
+    };
+    (function () {
+        var wf = document.createElement('script');
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+    })();
+</script>

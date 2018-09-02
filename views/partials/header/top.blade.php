@@ -33,34 +33,7 @@
                     <ul class="dropdown-menu margin-0 padding-0" style="top: 90%; font-size: 13px;">
                         @foreach(LaravelLocalization::getSupportedLocales() as $locale => $supportedLocale)
                             <li @if($locale==LaravelLocalization::getCurrentLocale()) class="active" @endif>
-                                @php
-                                    switch (Request::route()->getName()) {
-                                        case 'page' && isset($page):
-                                        $url = $page->present()->url($locale);
-                                        break;
-                                        case 'news.slug' && isset($post):
-                                        case 'blog.slug' && isset($post):
-                                        $url = $post->present()->url($locale);
-                                        break;
-                                        case 'news.category' && isset($category):
-                                        case 'blog.category' && isset($category):
-                                        case 'store.category.slug' && isset($category):
-                                        $url = $category->present()->url($locale);
-                                        break;
-                                        case 'store.product.slug' && isset($product):
-                                        $url = $product->present()->url($locale);
-                                        break;
-                                        case 'employee.view' && isset($employee):
-                                        $url = $employee->present()->url($locale);
-                                        break;
-                                        default:
-                                        $url = null;
-                                        break;
-                                    }
-                                    $localizedUrl = LaravelLocalization::getLocalizedURL($locale, $url);
-                                @endphp
-
-                                <a rel="alternate" hreflang="{!! $locale !!}" href="{{ $localizedUrl }}"><span class="flag-icon flag-icon-{{ $locale == "en" ? "us" : $locale }}"></span> {!! $supportedLocale['native'] !!}</a>
+                                <a rel="alternate" hreflang="{!! $locale !!}" href="{{ url($locale) }}"><span class="flag-icon flag-icon-{{ $locale == "en" ? "us" : $locale }}"></span> {!! $supportedLocale['native'] !!}</a>
                             </li>
                         @endforeach
                     </ul>

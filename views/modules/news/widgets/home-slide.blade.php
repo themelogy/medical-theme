@@ -3,7 +3,7 @@
         @foreach($posts as $post)
         <div class="gallery-item">
             <div class="gallery-image">
-                <img src="{{ $post->present()->firstImage(406,270,'fit',80) }}" alt="{{ $post->title }}">
+                <img src="{{ $post->present()->firstImage(406,270,'fit',60) }}" alt="{{ $post->title }}">
                 <div class="gallery-image-links">
                 </div>
             </div>

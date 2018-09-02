@@ -16,17 +16,17 @@
     @endif
     @foreach($pages->chunk($chunk_size) as $chunk)
     <div class="row">
-        @foreach($chunk as $page)
+        @foreach($chunk as $child)
             <div class="col-md-@if($loop->first){{ $column_size }}@elseif($loop->last && $column_div){{ $column_div }}@else{{ $column_size }}@endif">
                 <div class="thumbnail">
-                    <img class="img-thumbnail" src="{{ $page->present()->firstImage(400, 200, 'fit', 80) }}" alt="{{ $page->title }}" />
+                    <a href="{{ $child->url }}"><img class="img-thumbnail" src="{{ $child->present()->firstImage(400, 200, 'fit', 80) }}" alt="{{ $child->title }}" /></a>
                     <div class="caption">
-                        <h3 class="m-bot-20">{{ $page->title }}</h3>
-                        <p>{{ Str::words(strip_tags($page->body), 20) }}</p>
-                        <a href="{{ $page->url }}" class="btn btn-default btn-xs" role="button">{{ trans('global.buttons.read more') }}</a>
+                        <h3 class="m-bot-20"><a href="{{ $child->url }}">{{ $child->title }}</a></h3>
+                        <p>{{ Str::words(strip_tags($child->body), 20) }}</p>
                     </div>
                 </div>
             </div>
+            @unset($child)
         @endforeach
     </div>
     @endforeach

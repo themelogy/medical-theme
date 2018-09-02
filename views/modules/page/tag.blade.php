@@ -7,25 +7,21 @@
 @section('content')
     <section class="ls section_padding_50">
         <div class="container">
+            @foreach($pages->chunk(3) as $chunk)
             <div class="row">
-                <div class="col-sm-12">
-                    <div class="row">
-                        @forelse($pages as $page)
-                            <div class="col-sm-6 col-md-4">
-                                <div class="thumbnail" style="min-height:520px;">
-                                    <img class="img-thumbnail" src="{{ $page->present()->firstImage(400, 200, 'fit', 80) }}" alt="{{ $page->title }}" />
-                                    <div class="caption" style="min-height: 260px;">
-                                        <h3 class="m-bot-20">{{ $page->title }}</h3>
-                                        <p>{{ strip_tags(str_sentence($page->body, 1)) }}</p>
-                                        <p><a href="{{ $page->url }}" class="btn btn-default" role="button">{{ trans('global.buttons.read more') }}</a>
-                                    </div>
-                                </div>
+                @foreach($chunk as $page)
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <a href="{{ $page->url }}"><img class="img-thumbnail" src="{{ $page->present()->firstImage(400, 200, 'fit', 80) }}" alt="{{ $page->title }}" /></a>
+                            <div class="caption">
+                                <h3 class="m-bot-20"><a href="{{ $page->url }}">{{ $page->title }}</a></h3>
+                                <p>{!! ucfirst(Str::words(Str::replaceFirst('tüp bebek', $tag->name.' ', strip_tags(strtolower(html_entity_decode($page->body)))), 20)) !!}</p>
                             </div>
-                        @empty
-                        @endforelse
+                        </div>
                     </div>
-                </div>
+                @endforeach
             </div>
+            @endforeach
         </div>
     </section>
 @endsection

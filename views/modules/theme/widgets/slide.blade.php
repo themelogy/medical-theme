@@ -7,7 +7,7 @@
                     <div class="ls-slide" data-ls="slidedelay: 5500; durationout:24">
 
                         <!-- slide background -->
-                        <img src="{{ $slider->present()->firstImage(1280, 600, 'fit', 75) }}" class="ls-bg" alt="{{ $slider->title }}">
+                        <img src="{{ $slider->present()->firstImage(1280, 600, 'fit', 50) }}" class="ls-bg" alt="{{ $slider->title }}">
                         <p class="ls-slide title" style="top: {{ $slider->position_x+180 }}px; left: {{ $slider->position_y+380 }}px; white-space: nowrap; font-size: 50px; font-weight: 300;" data-ls="offsetxin:-100;
                                 durationin:1200;
                                 delayin:200;

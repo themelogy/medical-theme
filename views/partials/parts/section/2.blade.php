@@ -5,10 +5,10 @@
                 @menuItems('tup-bebek', 'home.accordion')
             </div>
             <div class="col-md-4">
-                @menuItems('tup-bebek-tedavisi', 'home.list')
+                @menuItems('tup-bebek-tedavisi', 'home.accordion')
             </div>
             <div class="col-md-4">
-                @menuItems('kadin-sagligi-ve-dogum', 'home.list')
+                @menuItems('kadin-sagligi-ve-dogum', 'home.accordion')
             </div>
         </div>
     </div>

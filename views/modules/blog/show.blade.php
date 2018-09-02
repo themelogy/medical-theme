@@ -8,10 +8,6 @@
     <article class="post type-post with-share-buttons">
         <header class="entry-header">
 
-            <h1 class="entry-title m-bot-20">
-                <a href="{{ $post->url }}" rel="bookmark">{{ $post->title }}</a>
-            </h1>
-
             <div class="entry-meta">
                 @if(isset($post->author))
                     <span class="author">
@@ -38,7 +34,7 @@
         <!-- .entry-header -->
 
         <div class="entry-content">
-            @if($image = $post->present()->firstImage(400, 400, 'resize', 80))
+            @if($image = $post->present()->firstImage(400, null, 'resize', 80))
                 <div class="thumbnail pull-right m-lft-20 m-bot-20">
                     <img class="img-thumbnail" src="{{ $image }}" alt="{{ $post->title }}" />
                 </div>

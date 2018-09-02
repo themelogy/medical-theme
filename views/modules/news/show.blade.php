@@ -8,10 +8,6 @@
     <article class="post type-post with-share-buttons">
         <header class="entry-header">
 
-            <h1 class="entry-title m-bot-20">
-                <a href="{{ $post->url }}" rel="bookmark">{{ $post->title }}</a>
-            </h1>
-
             <div class="entry-meta">
 
                 <span class="author">

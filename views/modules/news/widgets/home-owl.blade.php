@@ -15,7 +15,7 @@
                         </span>
                             </div>
                             <a href="{{ $post->url }}" rel="bookmark">
-                                <img src="{{ $post->present()->firstImage(400,250,'fit',80) }}" alt="{{ $post->title }}">
+                                <img src="{{ $post->present()->firstImage(400,250,'fit',60) }}" alt="{{ $post->title }}">
                             </a>
                         </div>
                         <div class="post-content" style="padding: 20px;">

@@ -27,5 +27,5 @@
             });
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ setting('contact::contact-map-key') }}&callback=initMap"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key={{ setting('contact::contact-map-key') }}&callback=initMap"></script>
 @endpush
